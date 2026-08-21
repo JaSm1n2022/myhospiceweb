@@ -143,6 +143,9 @@ ul {
   letter-spacing: 0.01em;
   text-decoration: none;
   white-space: nowrap;
+  /* <button> otherwise picks up the UA's buttonface background. */
+  background: transparent;
+  cursor: pointer;
   border: 1px solid transparent;
   transition: transform 0.25s var(--ease), background-color 0.25s var(--ease),
     color 0.25s var(--ease), border-color 0.25s var(--ease);
@@ -204,7 +207,8 @@ ul {
 }
 
 .brand__mark {
-  width: 30px;
+  height: 30px;
+  width: auto;
   flex: none;
 }
 
@@ -226,6 +230,54 @@ ul {
   text-transform: uppercase;
   color: var(--gold);
   margin-top: 3px;
+}
+
+/* Sticky header clears the anchor target. */
+.section {
+  scroll-margin-top: 84px;
+}
+
+.nav {
+  display: none;
+  margin-left: auto;
+  margin-right: 4px;
+  gap: 30px;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 780px) {
+  .nav {
+    display: flex;
+  }
+}
+
+.nav a {
+  position: relative;
+  text-decoration: none;
+  color: var(--cream-70);
+  padding-block: 6px;
+  transition: color 0.25s var(--ease);
+}
+
+.nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s var(--ease);
+}
+
+.nav a:hover {
+  color: var(--cream);
+}
+
+.nav a:hover::after {
+  transform: scaleX(1);
 }
 
 .topbar__call {
@@ -691,6 +743,146 @@ ul {
 }
 
 /* ---------------------------------------------------------
+   Reviews
+   --------------------------------------------------------- */
+.reviews {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 860px) {
+  .reviews {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  padding: clamp(26px, 3vw, 34px);
+  border-radius: var(--radius);
+  background: var(--forest-700);
+  border: 1px solid rgba(245, 241, 228, 0.07);
+  transition: border-color 0.3s var(--ease), background-color 0.3s var(--ease);
+}
+
+.review:hover {
+  border-color: rgba(227, 188, 87, 0.34);
+  background: var(--forest-600);
+}
+
+.review__mark {
+  display: block;
+  color: var(--gold);
+  opacity: 0.55;
+  margin-bottom: 18px;
+}
+
+.review__mark svg {
+  width: 30px;
+  height: auto;
+}
+
+.review__quote {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: clamp(1.04rem, 1.7vw, 1.14rem);
+  line-height: 1.5;
+  letter-spacing: -0.005em;
+  color: var(--cream);
+  /* Cards keep a common floor so the attributions line up. */
+  flex: 1 1 auto;
+}
+
+.review__by {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid var(--hairline);
+}
+
+.review__name {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.review__meta {
+  margin-top: 3px;
+  font-size: 0.84rem;
+  color: var(--cream-50);
+}
+
+.reviews__more {
+  display: flex;
+  justify-content: center;
+  margin-top: clamp(30px, 4vw, 44px);
+}
+
+/* ---------------------------------------------------------
+   FAQ
+   Outlined cards rather than filled ones, so this section reads as
+   lighter than the advantage grid above it.
+   --------------------------------------------------------- */
+.faq {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+  align-items: start;
+}
+
+@media (min-width: 820px) {
+  .faq {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.faq__card {
+  padding: clamp(24px, 3vw, 32px);
+  border-radius: var(--radius);
+  border: 1px solid rgba(245, 241, 228, 0.13);
+  background: rgba(245, 241, 228, 0.02);
+  transition: border-color 0.3s var(--ease), background-color 0.3s var(--ease);
+}
+
+.faq__card:hover {
+  border-color: rgba(227, 188, 87, 0.36);
+  background: rgba(245, 241, 228, 0.045);
+}
+
+.faq__q {
+  font-size: clamp(1.12rem, 2vw, 1.3rem);
+  margin-bottom: 12px;
+  text-wrap: balance;
+}
+
+/* The heading takes focus after "Show more"; the ring is enough on its own. */
+.faq__q:focus {
+  outline: none;
+}
+
+.faq__a {
+  color: var(--cream-70);
+  font-size: 0.96rem;
+}
+
+.faq__more {
+  display: flex;
+  justify-content: center;
+  margin-top: clamp(30px, 4vw, 44px);
+  min-height: 52px;
+}
+
+.faq__count {
+  padding-left: 12px;
+  margin-left: 2px;
+  border-left: 1px solid var(--hairline);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--cream-50);
+}
+
+/* ---------------------------------------------------------
    Footer
    --------------------------------------------------------- */
 .footer {
@@ -713,7 +905,8 @@ ul {
 }
 
 .footer__mark {
-  width: 46px;
+  height: 42px;
+  width: auto;
   margin-bottom: 22px;
 }
 
@@ -821,7 +1014,55 @@ ul {
     font-size: 0.56rem;
     letter-spacing: 0.15em;
   }
-  .topbar__call {
+  /* Sticky header clears the anchor target. */
+.section {
+  scroll-margin-top: 84px;
+}
+
+.nav {
+  display: none;
+  margin-left: auto;
+  margin-right: 4px;
+  gap: 30px;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 780px) {
+  .nav {
+    display: flex;
+  }
+}
+
+.nav a {
+  position: relative;
+  text-decoration: none;
+  color: var(--cream-70);
+  padding-block: 6px;
+  transition: color 0.25s var(--ease);
+}
+
+.nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s var(--ease);
+}
+
+.nav a:hover {
+  color: var(--cream);
+}
+
+.nav a:hover::after {
+  transform: scaleX(1);
+}
+
+.topbar__call {
     padding: 9px 15px;
     font-size: 0.82rem;
   }

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Home, Users, Heart, Award, FileText, Mail, HelpCircle } from 'lucide-react'
+import { Home, Users, Heart, Award, FileText, Mail, HelpCircle, Star } from 'lucide-react'
 import Halo from './components/Halo.jsx'
 import photoFamily from './assets/family.jpg'
 import photoWalker from './assets/nurse-walker.jpg'
@@ -8,6 +8,7 @@ import photoEmbrace from './assets/embrace.jpg'
 import achcMark from './assets/achc-accredited.png'
 import Reveal from './components/Reveal.jsx'
 import Faq from './components/Faq.jsx'
+import Reviews from './components/Reviews.jsx'
 import {
   agency,
   servicesDetailed,
@@ -110,6 +111,10 @@ export default function App() {
             <a className="nav__link" href="#advantage-h" onClick={(e) => scrollToSection(e, 'advantage-h')}>
               <Award size={18} />
               <span>Why Choose Us</span>
+            </a>
+            <a className="nav__link" href="#reviews-h" onClick={(e) => scrollToSection(e, 'reviews-h')}>
+              <Star size={18} />
+              <span>Reviews</span>
             </a>
             <a className="nav__link" href="#faq-h" onClick={(e) => scrollToSection(e, 'faq-h')}>
               <HelpCircle size={18} />
@@ -271,16 +276,143 @@ export default function App() {
               ))}
             </div>
 
+            {/* Four Levels of Hospice Care */}
+            <Reveal style={{ marginTop: 'clamp(64px, 9vw, 100px)' }}>
+              <div className="levels-intro">
+                <h3 className="h2" style={{ marginBottom: '16px' }}>
+                  Four Levels of Hospice Care
+                </h3>
+                <p className="levels-intro__subtitle">
+                  The Right Level of Care for Every Stage of the Journey
+                </p>
+                <p className="prose" style={{ marginTop: '20px' }}>
+                  Hospice care is designed to respond to each patient's changing needs. Depending on the patient's condition and circumstances, Medicare recognizes four levels of hospice care.
+                </p>
+                <p className="prose">
+                  Our hospice team continually evaluates each patient's needs and determines the appropriate level of care based on clinical circumstances and the individualized plan of care.
+                </p>
+              </div>
+            </Reveal>
+
+            <div className="levels-grid">
+              <Reveal className="level-card" delay={0}>
+                <div className="level-card__number">1</div>
+                <h4 className="level-card__title">Routine Home Care</h4>
+                <p className="level-card__tagline">Comfort and support wherever you call home.</p>
+                <p className="level-card__text">
+                  Routine Home Care is the most common level of hospice care. It is provided when a patient is receiving hospice services in their place of residence and does not require Continuous Home Care or General Inpatient Care.
+                </p>
+                <p className="level-card__text">
+                  The hospice interdisciplinary team provides scheduled care based on the patient's individualized plan of care. Services may include:
+                </p>
+                <ul className="level-card__list">
+                  <li>Skilled nursing care</li>
+                  <li>Pain and symptom management</li>
+                  <li>Hospice aide services</li>
+                  <li>Social work support</li>
+                  <li>Spiritual care</li>
+                  <li>Medications related to the terminal illness and related conditions</li>
+                  <li>Medical equipment and supplies related to the hospice plan of care</li>
+                  <li>Counseling and caregiver education</li>
+                  <li>Volunteer services, when appropriate and available</li>
+                </ul>
+                <p className="level-card__text">
+                  A patient's home may be a private residence, assisted living or memory care community, nursing facility, or another setting the patient considers home.
+                </p>
+                <p className="level-card__note">
+                  <strong>Routine Home Care does not mean that hospice staff remain in the home 24 hours a day.</strong> Hospice support is available 24/7 for hospice-related concerns, while in-person visits are provided according to the patient's needs and plan of care.
+                </p>
+              </Reveal>
+
+              <Reveal className="level-card" delay={90}>
+                <div className="level-card__number">2</div>
+                <h4 className="level-card__title">Continuous Home Care</h4>
+                <p className="level-card__tagline">Additional care during periods of crisis.</p>
+                <p className="level-card__text">
+                  Continuous Home Care may be provided during a period of crisis when a patient experiences acute medical symptoms that require intensive hospice care to achieve palliation and symptom management while remaining at home.
+                </p>
+                <p className="level-card__text">
+                  During Continuous Home Care, hospice provides extended nursing care, with hospice aide services supplementing nursing care as appropriate.
+                </p>
+                <p className="level-card__text">
+                  Examples of symptoms that may require this level of care can include:
+                </p>
+                <ul className="level-card__list">
+                  <li>Uncontrolled pain</li>
+                  <li>Severe shortness of breath</li>
+                  <li>Significant agitation or restlessness</li>
+                  <li>Uncontrolled nausea or vomiting</li>
+                  <li>Other acute symptoms requiring intensive management</li>
+                </ul>
+                <p className="level-card__note">
+                  Continuous Home Care is provided only when specific clinical and Medicare requirements are met. It is intended for short-term management of a medical crisis and is <strong>not a substitute for long-term or 24-hour custodial caregiving.</strong>
+                </p>
+              </Reveal>
+
+              <Reveal className="level-card" delay={0}>
+                <div className="level-card__number">3</div>
+                <h4 className="level-card__title">Inpatient Respite Care</h4>
+                <p className="level-card__tagline">Temporary relief for caregivers.</p>
+                <p className="level-card__text">
+                  Caring for someone with a life-limiting illness can be physically and emotionally demanding. Inpatient Respite Care provides short-term relief for the patient's caregiver when respite is needed.
+                </p>
+                <p className="level-card__text">
+                  The patient is temporarily admitted to a Medicare-approved inpatient facility arranged by the hospice, such as a participating:
+                </p>
+                <ul className="level-card__list">
+                  <li>Hospice inpatient facility</li>
+                  <li>Hospital</li>
+                  <li>Skilled nursing facility</li>
+                </ul>
+                <p className="level-card__text">
+                  Under the Medicare Hospice Benefit, inpatient respite care may generally be provided for <strong>up to five consecutive days at a time</strong>.
+                </p>
+                <p className="level-card__text">
+                  After the respite period, the patient generally returns home and resumes Routine Home Care.
+                </p>
+              </Reveal>
+
+              <Reveal className="level-card" delay={90}>
+                <div className="level-card__number">4</div>
+                <h4 className="level-card__title">General Inpatient Care</h4>
+                <p className="level-card__tagline">Intensive symptom management when symptoms cannot be managed in another setting.</p>
+                <p className="level-card__text">
+                  General Inpatient Care, or GIP, is a short-term level of hospice care for patients experiencing pain or other acute symptoms that cannot feasibly be managed in their current setting.
+                </p>
+                <p className="level-card__text">
+                  The patient is temporarily admitted to an appropriate inpatient setting where intensive nursing and hospice care can be provided.
+                </p>
+                <p className="level-card__text">
+                  GIP may be appropriate for situations involving:
+                </p>
+                <ul className="level-card__list">
+                  <li>Uncontrolled or severe pain</li>
+                  <li>Severe respiratory distress</li>
+                  <li>Unmanageable agitation or delirium</li>
+                  <li>Persistent nausea or vomiting</li>
+                  <li>Other symptoms requiring intensive nursing intervention</li>
+                </ul>
+                <p className="level-card__note">
+                  General Inpatient Care is <strong>not intended to be permanent residential placement</strong>. Once the patient's symptoms are stabilized and can be managed at a lower level of care, the hospice team works with the patient and family to transition to the appropriate setting and level of care.
+                </p>
+              </Reveal>
+            </div>
+
             <Reveal className="cta" style={{ marginTop: 'clamp(48px, 6vw, 72px)' }}>
-              <h3 className="h2" style={{ fontSize: '1.8rem', marginBottom: '16px' }}>
-                Care Designed Around You
-              </h3>
-              <p className="cta__text">
-                Every patient's hospice journey is different. Our interdisciplinary team develops an individualized plan of care based on the patient's condition, needs, goals, values, and preferences.
-              </p>
-              <p className="cta__text" style={{ fontWeight: '600', marginTop: '12px' }}>
-                Have questions about hospice services? Contact Haloes Touch Hospice to speak with our team or request a hospice evaluation.
-              </p>
+              <div>
+                <h3 className="h2" style={{ fontSize: '1.8rem', marginBottom: '16px' }}>
+                  Care That Changes With Your Needs
+                </h3>
+                <p className="cta__text">
+                  Every hospice journey is different. A patient may receive different levels of hospice care as their condition and needs change.
+                </p>
+                <p className="cta__text">
+                  Our interdisciplinary hospice team continually evaluates each patient's condition and develops an individualized plan of care focused on <strong>comfort, dignity, symptom management, and quality of life.</strong>
+                </p>
+                <p className="cta__text" style={{ fontWeight: '600', marginTop: '16px' }}>
+                  If you are unsure which level of hospice care may be appropriate for you or your loved one, contact Haloes Touch Hospice. Our team can answer your questions, evaluate the patient's needs, and explain available hospice services.
+                </p>
+              </div>
               <a className="btn btn--gold" href={telHref(agency.phone)}>
                 Call {agency.phone}
               </a>
@@ -316,6 +448,9 @@ export default function App() {
             </div>
           </div>
         </section>
+
+        {/* ---------- Reviews ---------- */}
+        <Reviews />
 
         {/* ---------- FAQ ---------- */}
         <Faq />

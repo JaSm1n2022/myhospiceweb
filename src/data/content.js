@@ -146,3 +146,23 @@ export const faqs = [
     a: 'Hospice supports both the patient and family. Services may include caregiver education, emotional and psychosocial support, spiritual care, assistance with community resources, and respite care when eligibility requirements are met. Hospice also provides bereavement and grief support to families following the death of their loved one, with bereavement services available for up to one year following the patient\'s death.',
   },
 ]
+
+export const reviews = [
+  {
+    quote: 'My family was referred to Haloes Touch when my 93-year-old father needed a care setting where he could receive full assistance with his daily needs. Phil was incredibly helpful throughout the entire process. He took the time to find a wonderful placement for my father and even drove my mom there so she could visit and make sure it was the right fit. Phil also guided us through the enrollment process and helped us with the paperwork, making what could have been an overwhelming experience much easier for our family. The placement he found for my dad has exceeded our expectations. He is very well cared for, and he is always in a good mood whenever I visit or speak with him. We are very grateful for the care, guidance, and support we received. I would definitely recommend Haloes Touch to families looking for compassionate support and assistance for their loved ones.',
+    name: 'Shep A.',
+    relation: 'Family member',
+    source: 'Google Reviews',
+  },
+  {
+    quote: 'I am truly grateful to the entire Haloes Touch Hospice team for the compassionate care and support they provided to my mom during her final journey. From the CNAs who helped with her personal care and made sure she was clean and comfortable, to the nurses who cared for her with patience, kindness, and compassion, everyone treated my mom with dignity and respect. I also want to thank the office staff and management for always being supportive, responsive, and available whenever our family had questions or needed guidance. During one of the most difficult times in our lives, it gave our family so much peace of mind knowing that my mom was being cared for by people who genuinely cared about her comfort and well-being. We never felt like we had to go through this experience alone. Even after my mom passed away, the support from Haloes Touch did not simply end. Through their bereavement program, our family continued to receive comfort, support, and resources as we began the grieving process. It meant so much to know that they continued to care about our family even after my mom was gone. To everyone at Haloes Touch Hospice—from the CNAs and nurses to the entire hospice team, office staff, and management—thank you from the bottom of my heart for everything you did for my mom and our family. Your kindness and compassion made a very difficult journey a little easier for all of us. I will always be grateful for the care you gave my mom and would wholeheartedly recommend Haloes Touch Hospice to any family looking for compassionate and dignified care for their loved one.',
+    name: 'Grace W.',
+    relation: 'Daughter of patient',
+    source: '',
+  },
+]
+
+export const reviewsLink = {
+  href: 'https://www.google.com/search?q=haloes+touch+hospice+reviews',
+  label: 'Read more reviews',
+}
