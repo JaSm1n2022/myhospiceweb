@@ -7,7 +7,7 @@ import { reviews, reviewsLink } from '../data/content.js'
  */
 export default function Reviews() {
   return (
-    <section className="section section--quiet" id="reviews" aria-labelledby="reviews-h">
+    <section className="section" id="reviews" aria-labelledby="reviews-h">
       <div className="shell">
         <Reveal className="head head--center">
           <p className="eyebrow">In their words</p>
@@ -25,6 +25,13 @@ export default function Reviews() {
                 </svg>
               </span>
               <blockquote className="review__quote">{r.quote}</blockquote>
+              <div className="review__stars" aria-label="5 star rating">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                ))}
+              </div>
               <footer className="review__by">
                 <p className="review__name">{r.name}</p>
                 <p className="review__meta">

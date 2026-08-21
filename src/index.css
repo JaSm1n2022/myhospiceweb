@@ -1591,10 +1591,22 @@ ul {
   font-size: 0.95rem;
   line-height: 1.65;
   color: var(--cream);
-  margin: 0 0 24px 0;
+  margin: 0 0 20px 0;
   padding: 0;
   flex: 1;
   opacity: 0.9;
+}
+
+.review__stars {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 20px;
+}
+
+.review__stars svg {
+  width: 16px;
+  height: 16px;
+  color: var(--gold);
 }
 
 .review__by {
