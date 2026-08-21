@@ -139,30 +139,38 @@ export const servicesDetailed = [
   },
 ]
 
+export const advantageIntro = 'Why Choose Us'
+
 export const advantages = [
   {
     title: 'Trained and fully licensed staff',
     body: 'Our clinicians go through rigorous screening and training so they can deliver evidence-based care — and build the kind of connection with patients that feels like a second family.',
+    icon: 'nursing',
   },
   {
     title: 'Personalized care plans',
     body: 'We build the plan around your goals and preferences, with specific programs for conditions like COPD, heart failure, diabetes, and fall prevention.',
+    icon: 'physician',
   },
   {
     title: '24/7, 365 days a year',
     body: 'Nurses, physicians, and therapists are available round the clock. On-call clinicians answer the phone promptly, which keeps patients safer and out of the hospital.',
+    icon: 'aide',
   },
   {
     title: 'Full coverage',
     body: 'Medicare covers almost all hospice expenses. We are Medicare certified, and we will walk you through what qualifies.',
+    icon: 'equipment',
   },
   {
     title: 'Trusted in the community',
     body: 'We are one of the most trusted names in hospice care in Southern Nevada. That trust was earned patient by patient, family by family.',
+    icon: 'social',
   },
   {
     title: 'Excellent quality score',
     body: 'Every part of our service exceeds the standards set by regulatory bodies, and our outcomes consistently run ahead of the national hospice benchmark.',
+    icon: 'bereavement',
   },
 ]
 
@@ -215,10 +223,6 @@ export const faqs = [
   {
     q: 'How much does hospice care cost?',
     a: 'For eligible Medicare beneficiaries, the Medicare Hospice Benefit generally covers hospice services related to the terminal illness and related conditions, including nursing care, medications, medical equipment, supplies, and other covered hospice services. Certain copayments or coinsurance may apply, and room and board is generally not covered under the Medicare Hospice Benefit. Medicaid and many private insurance plans also provide hospice benefits, although coverage varies. Our team can help verify your benefits and explain coverage before admission.',
-  },
-  {
-    q: 'Can hospice patients still go to the hospital?',
-    a: 'Yes, when hospital care is appropriate. However, patients and caregivers should contact the hospice team before going to the emergency room or hospital whenever possible, especially when the need may be related to the terminal illness. Hospice is available 24 hours a day, 7 days a week to help assess changes in condition, manage symptoms, and determine the appropriate level of care. Patients also have the right to revoke their hospice election if they decide they no longer wish to receive hospice care.',
   },
   {
     q: 'What if the patient lives longer than six months?',

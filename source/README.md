@@ -21,6 +21,7 @@ src/index.css         Brand tokens and all styles
 src/data/content.js   All brochure copy, in one place
 src/assets/           Brochure photos, the Haloes Touch mark, the ACHC mark
 src/components/
+  Advantage.jsx       Advantage band + six-item grid
   Services.jsx        Services band + eight-item grid
   ServiceIcon.jsx     The eight line icons
   Reviews.jsx         Three review cards
@@ -56,18 +57,17 @@ orchestrated motion on the page. Everything respects
 
 ## Photographs
 
-`services-hero.jpg` is a supplied original at full resolution — the only photo
-here that is not resolution-limited. It anchors the services band.
+`services-hero.jpg` and `advantage-hero.jpg` are supplied originals at full
+resolution. They anchor the services and advantage bands.
 
-The remaining three come out of the brochure itself. The PDF is a flattened
+The remaining two come out of the brochure itself. The PDF is a flattened
 100 dpi scan with no separate image assets, so each one was cropped from the
 page, colour-corrected back toward the printed piece, and upscaled 2x. They are
 deliberately used at modest sizes — roughly 340 to 400 CSS pixels wide — because
 that is as far as the source resolution stretches.
 
 They are placed one per section: the nurse and patient in the philosophy
-section, the pair with the advantage grid, and the park photo alongside the
-care panels.
+section, and the park photo alongside the care panels.
 
 **Replace these with the originals when you can.** If the agency has the source
 files from whoever designed the brochure, dropping them into `src/assets/` under
@@ -114,9 +114,22 @@ a recolour, not their official reverse artwork. Ask ACHC for their accredited-
 organisation logo pack and use their white version if one exists — the file
 here can be swapped at the same path with no code change.
 
+## One claim to reconcile
+
+The supplied advantage artwork says **"We are Medicare certified"** under Full
+Coverage. The brochure, and the hero and footer of this site, both say
+**"Medicare and Medicaid certified."** The advantage copy in `content.js` now
+follows the newer artwork; the hero and footer still carry the dual claim.
+
+Pick one and make it consistent. If the agency is certified by both, the
+advantage line should say so. If Medicaid certification lapsed or was never
+held, the hero and footer are the ones that need changing, and that is the more
+urgent direction to check.
+
 ## Before it goes live
 
 - Replace the three placeholder reviews and the Google link (see above).
+- Reconcile the Medicare/Medicaid certification claim (see above).
 - Have the FAQ answers reviewed (see above).
 - Confirm the white ACHC mark against their logo guidelines (see above).
 - Swap in full-resolution photography (see above).

@@ -57,28 +57,36 @@ export const services = [
   },
 ]
 
+export const advantageIntro = 'Why choose us'
+
 export const advantages = [
   {
+    icon: 'staff',
     title: 'Trained and fully licensed staff',
-    body: 'Our clinicians go through rigorous screening and training so they can deliver evidence-based care — and build the kind of connection with patients that feels like a second family.',
+    body: 'Our clinicians go through rigorous screening and training so they can deliver evidence-based care \u2014 and build the kind of connection with patients that feels like a second family.',
   },
   {
+    icon: 'plan',
     title: 'Personalized care plans',
     body: 'We build the plan around your goals and preferences, with specific programs for conditions like COPD, heart failure, diabetes, and fall prevention.',
   },
   {
+    icon: 'clock',
     title: '24/7, 365 days a year',
     body: 'Nurses, physicians, and therapists are available round the clock. On-call clinicians answer the phone promptly, which keeps patients safer and out of the hospital.',
   },
   {
+    icon: 'shield',
     title: 'Full coverage',
-    body: 'Medicare covers almost all hospice expenses. We are certified by both Medicare and Medicaid, and we will walk you through what qualifies.',
+    body: 'Medicare covers almost all hospice expenses. We are Medicare certified, and we will walk you through what qualifies.',
   },
   {
+    icon: 'community',
     title: 'Trusted in the community',
     body: 'We are one of the most trusted names in hospice care in Southern Nevada. That trust was earned patient by patient, family by family.',
   },
   {
+    icon: 'award',
     title: 'Excellent quality score',
     body: 'Every part of our service exceeds the standards set by regulatory bodies, and our outcomes consistently run ahead of the national hospice benchmark.',
   },

@@ -4,7 +4,8 @@ import Halo from './components/Halo.jsx'
 import photoEmbrace from './assets/embrace.jpg'
 import photoCompassionate from '../source/compassionate.png'
 import photoElderlyChair from '../source/elderychair.png'
-import achcMark from './assets/achc-accredited.png'
+import photoElderyCare from '../source/elderycare.png'
+import achcMark from '../source/achc-white.png'
 import elderHand from './assets/elderhand.png'
 import Reveal from './components/Reveal.jsx'
 import Faq from './components/Faq.jsx'
@@ -15,6 +16,7 @@ import {
   services,
   servicesIntro,
   advantages,
+  advantageIntro,
   therapies,
   medicareCriteria,
 } from './data/content.js'
@@ -27,13 +29,16 @@ function Eyebrow({ children }) {
 
 function AchcBadge({ small = false }) {
   return (
-    <img
-      className={`achc ${small ? 'achc--sm' : ''}`}
-      src={achcMark}
-      alt="ACHC Accredited"
-      width="276"
-      height="282"
-    />
+    <div className={`achc-badge ${small ? 'achc-badge--sm' : ''}`}>
+      <img
+        className={`achc ${small ? 'achc--sm' : ''}`}
+        src={achcMark}
+        alt="ACHC"
+        width="276"
+        height="282"
+      />
+      <span className="achc-badge__label">Accredited</span>
+    </div>
   )
 }
 
@@ -443,29 +448,42 @@ export default function App() {
         {/* ---------- Advantage ---------- */}
         <section className="section section--quiet" aria-labelledby="advantage-h">
           <div className="shell">
-            <div className="head-row">
-              <Reveal className="head">
-                <Eyebrow>Why Choose Us</Eyebrow>
+            <div className="svc-band svc-band--mirror">
+              <Reveal className="svc-band__media">
+                <figure className="figure svc-band__figure">
+                  <img
+                    src={photoElderyCare}
+                    alt="A Haloes Touch nurse sitting with a patient at home, both laughing."
+                    width="1400"
+                    height="933"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </figure>
+              </Reveal>
+
+              <Reveal className="svc-band__text svc-band__text--end" delay={90}>
+                <p className="eyebrow">{advantageIntro}</p>
+                <span className="dot-rule dot-rule--wide" aria-hidden="true" />
                 <h2 className="h2" id="advantage-h">
                   The Haloes Touch advantage
                 </h2>
               </Reveal>
-              <Reveal delay={90}>
-                <Figure
-                  src={photoEmbrace}
-                  alt="A caregiver with her arms around a seated patient, both laughing."
-                  ratio="1.42"
-                />
-              </Reveal>
             </div>
-            <div className="cards">
+
+            <ul className="adv-grid">
               {advantages.map((a, i) => (
-                <Reveal key={a.title} className="card" delay={(i % 3) * 90}>
-                  <h3 className="card__title">{a.title}</h3>
-                  <p className="card__body">{a.body}</p>
+                <Reveal as="li" key={a.title} className="adv-item" delay={(i % 3) * 80}>
+                  <span className="svc-item__icon">
+                    <ServiceIcon name={a.icon} />
+                  </span>
+                  <div>
+                    <h3 className="adv-item__title">{a.title}</h3>
+                    <p className="adv-item__body">{a.body}</p>
+                  </div>
                 </Reveal>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
@@ -565,13 +583,36 @@ export default function App() {
             </div>
           </div>
         </div>
+        <div className="shell footer__legal">
+          <div className="footer__legal-section">
+            <h3 className="footer__legal-h">Legal & Privacy</h3>
+            <div className="footer__legal-links">
+              <a href="#privacy-policy">Privacy Policy</a>
+              <span className="footer__dot">•</span>
+              <a href="#terms-of-use">Terms of Use</a>
+              <span className="footer__dot">•</span>
+              <a href="#notice-privacy">Notice of Privacy Practices</a>
+              <span className="footer__dot">•</span>
+              <a href="#accessibility">Accessibility</a>
+            </div>
+          </div>
+        </div>
+
         <div className="shell footer__base">
-          <p>
-            © {new Date().getFullYear()} {agency.name}
+          <div className="footer__base-content">
+            <p>
+              © {new Date().getFullYear()} {agency.name}. All rights reserved.
+            </p>
+            <p className="footer__seal">
+              <AchcBadge small />
+              <span>Medicare certified</span>
+            </p>
+          </div>
+          <p className="footer__disclaimer">
+            <strong>Image Notice:</strong> Some images on this website are AI-generated or used for illustrative purposes. They are intended to represent the compassionate care and services we provide and may not depict actual Haloes Touch Hospice patients, families, or staff.
           </p>
-          <p className="footer__seal">
-            <AchcBadge small />
-            <span>Medicare certified</span>
+          <p className="footer__disclaimer">
+            <strong>Medical Disclaimer:</strong> Information provided on this website is for general educational purposes and should not be considered a substitute for professional medical advice, diagnosis, or treatment. If you have questions regarding your health or hospice care, please consult an appropriate healthcare professional.
           </p>
         </div>
       </footer>

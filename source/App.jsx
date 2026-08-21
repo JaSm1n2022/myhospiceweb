@@ -1,16 +1,15 @@
 import Halo from './components/Halo.jsx'
 import photoFamily from './assets/family.jpg'
 import photoPark from './assets/wheelchair-park.jpg'
-import photoEmbrace from './assets/embrace.jpg'
 import achcMark from './assets/achc-white.png'
 import haloesMark from './assets/haloes-mark.png'
 import Reveal from './components/Reveal.jsx'
 import Faq from './components/Faq.jsx'
 import Reviews from './components/Reviews.jsx'
 import Services from './components/Services.jsx'
+import Advantage from './components/Advantage.jsx'
 import {
   agency,
-  advantages,
   therapies,
   medicareCriteria,
 } from './data/content.js'
@@ -133,33 +132,7 @@ export default function App() {
         <Services />
 
         {/* ---------- Advantage ---------- */}
-        <section className="section section--quiet" aria-labelledby="advantage-h">
-          <div className="shell">
-            <div className="head-row">
-              <Reveal className="head">
-                <Eyebrow>Why families choose us</Eyebrow>
-                <h2 className="h2" id="advantage-h">
-                  The Haloes Touch advantage
-                </h2>
-              </Reveal>
-              <Reveal delay={90}>
-                <Figure
-                  src={photoEmbrace}
-                  alt="A caregiver with her arms around a seated patient, both laughing."
-                  ratio="1.42"
-                />
-              </Reveal>
-            </div>
-            <div className="cards">
-              {advantages.map((a, i) => (
-                <Reveal key={a.title} className="card" delay={(i % 3) * 90}>
-                  <h3 className="card__title">{a.title}</h3>
-                  <p className="card__body">{a.body}</p>
-                </Reveal>
-              ))}
-            </div>
-          </div>
-        </section>
+        <Advantage />
 
         {/* ---------- Levels of care ---------- */}
         <section className="section" aria-labelledby="care-h">
