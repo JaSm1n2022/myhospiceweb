@@ -5,6 +5,7 @@ import photoFamily from './assets/family.jpg'
 import photoWalker from './assets/nurse-walker.jpg'
 import photoPark from './assets/wheelchair-park.jpg'
 import photoEmbrace from './assets/embrace.jpg'
+import photoCompassionate from '../source/compassionate.png'
 import achcMark from './assets/achc-accredited.png'
 import elderHand from './assets/elderhand.png'
 import Reveal from './components/Reveal.jsx'
@@ -187,7 +188,7 @@ export default function App() {
                 </h2>
                 <Figure
                   className="figure--philosophy"
-                  src={photoFamily}
+                  src={photoCompassionate}
                   alt="A Haloes Touch nurse leaning beside a seated patient, both smiling."
                   ratio="0.79"
                 />
