@@ -1,11 +1,12 @@
 import { useState } from 'react'
-import { Home, Users, Heart, Award, FileText, Mail, HelpCircle, Star } from 'lucide-react'
+import { Home, Users, Heart, Award, FileText, Mail, HelpCircle, Star, Stethoscope, Eye, Activity, Sparkles } from 'lucide-react'
 import Halo from './components/Halo.jsx'
 import photoFamily from './assets/family.jpg'
 import photoWalker from './assets/nurse-walker.jpg'
 import photoPark from './assets/wheelchair-park.jpg'
 import photoEmbrace from './assets/embrace.jpg'
 import photoCompassionate from '../source/compassionate.png'
+import photoElderlyChair from '../source/elderychair.png'
 import achcMark from './assets/achc-accredited.png'
 import elderHand from './assets/elderhand.png'
 import Reveal from './components/Reveal.jsx'
@@ -14,6 +15,7 @@ import Reviews from './components/Reviews.jsx'
 import {
   agency,
   servicesDetailed,
+  servicesSimple,
   advantages,
   therapies,
   medicareCriteria,
@@ -253,7 +255,7 @@ export default function App() {
         {/* ---------- Services ---------- */}
         <section className="section" aria-labelledby="services-h">
           <div className="shell">
-            <div className="head-row">
+            <div className="head-row head-row--services">
               <Reveal className="head">
                 <Eyebrow>Our Services</Eyebrow>
                 <h2 className="h2" id="services-h">
@@ -266,22 +268,38 @@ export default function App() {
                   For eligible patients, services related to the terminal illness and related conditions are provided according to the patient's individualized hospice plan of care.
                 </p>
               </Reveal>
-              <Reveal delay={90}>
+              <Reveal delay={90} className="head-row__image">
                 <Figure
-                  src={photoPark}
+                  className="figure--services"
+                  src={photoElderlyChair}
                   alt="A nurse pushing a patient in a wheelchair along a tree-lined path."
                   ratio="1.04"
                 />
               </Reveal>
             </div>
 
-            <div className="services-grid">
-              {servicesDetailed.map((service, i) => (
-                <Reveal key={service.title} className="service-card" delay={(i % 3) * 60}>
-                  <h3 className="service-card__title">{service.title}</h3>
-                  <p className="service-card__description">{service.description}</p>
-                </Reveal>
-              ))}
+            <div className="services-grid services-grid--simple">
+              {servicesSimple.map((service, i) => {
+                const iconMap = {
+                  Stethoscope,
+                  Eye,
+                  Activity,
+                  Heart,
+                  Users,
+                  Sparkles,
+                  Award,
+                }
+                const IconComponent = iconMap[service.icon]
+                return (
+                  <Reveal key={service.title} className="service-card service-card--simple" delay={(i % 4) * 60}>
+                    <div className="service-card__icon">
+                      {IconComponent && <IconComponent size={32} strokeWidth={1.5} />}
+                    </div>
+                    <h3 className="service-card__title">{service.title}</h3>
+                    <p className="service-card__description">{service.description}</p>
+                  </Reveal>
+                )
+              })}
             </div>
 
             {/* Four Levels of Hospice Care */}

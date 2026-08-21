@@ -9,6 +9,49 @@ export const agency = {
   city: 'Henderson, NV 89052',
 }
 
+export const servicesSimple = [
+  {
+    title: 'Hospice Physician Services',
+    description: 'Our hospice physician works with the interdisciplinary team and the patient\'s attending physician, when applicable, to oversee the hospice plan of care and help manage symptoms related to the patient\'s terminal illness.',
+    icon: 'Stethoscope',
+  },
+  {
+    title: 'Skilled Nursing Care',
+    description: 'Hospice nurses assess the patient\'s condition, manage pain and other symptoms, provide education to patients and caregivers, coordinate medications and treatments, and help families understand changes in the patient\'s condition.',
+    icon: 'Eye',
+  },
+  {
+    title: 'Medical Equipment & Supplies',
+    description: 'When medically necessary and included in the hospice plan of care, we arrange equipment and supplies related to the patient\'s terminal illness and related conditions.',
+    icon: 'Activity',
+  },
+  {
+    title: 'Hospice Aide Services',
+    description: 'Hospice aides provide personal care and assistance based on the patient\'s needs and plan of care. Services may include bathing, grooming, dressing, personal hygiene, and other activities that promote comfort and dignity.',
+    icon: 'Heart',
+  },
+  {
+    title: 'Social Work Support',
+    description: 'Hospice social workers provide emotional and psychosocial support to patients and families. They can also assist with advance care planning, caregiver concerns, community resources, and other practical needs related to the hospice journey.',
+    icon: 'Users',
+  },
+  {
+    title: 'Spiritual Care',
+    description: 'Spiritual care is available according to each patient\'s and family\'s individual beliefs, values, traditions, and preferences. Our spiritual care team provides compassionate support and can also coordinate with the patient\'s own faith community when requested.',
+    icon: 'Sparkles',
+  },
+  {
+    title: 'Bereavement Support',
+    description: 'Grief and bereavement support is available to families and loved ones following a patient\'s death. Our bereavement services provide support, education, resources, and guidance as families navigate the grieving process.',
+    icon: 'Heart',
+  },
+  {
+    title: 'Volunteer Support',
+    description: 'Trained hospice volunteers may provide companionship and additional support to patients and families based on individual needs, preferences, and volunteer availability.',
+    icon: 'Award',
+  },
+]
+
 export const servicesDetailed = [
   {
     title: 'Hospice Physician Services',
