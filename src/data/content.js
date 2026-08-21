@@ -2,24 +2,50 @@ export const agency = {
   name: 'Haloes Touch Hospice Inc.',
   short: 'Haloes Touch',
   phone: '702-625-4644',
-  phoneAlt: '702-820-4662',
+  fax: '702-960-4065',
   email: 'services@haloestouch.com',
   site: 'haloestouch.com',
   street: '11500 S Eastern Ave, Ste 150',
   city: 'Henderson, NV 89052',
 }
 
-export const services = [
-  'Oversight by a hospice physician who manages the care and treatment plan.',
-  'Skilled nurses for pain and symptom management.',
-  'Medical equipment and supplies delivered to the home.',
-  'Hospice aides for personal care — bathing, dressing, grooming.',
-  'Physical therapy to help maintain mobility and ease discomfort.',
-  'Occupational therapy to help keep independence in daily activities.',
-  'Social workers for emotional support, counseling, and help with financial and legal matters.',
-  'Bereavement counseling for families.',
-  'Spiritual and religious services from our chaplains.',
-  'Trained volunteers for companionship, errands, and other support.',
+export const servicesDetailed = [
+  {
+    title: 'Hospice Physician Services',
+    description: 'Our hospice physician works with the interdisciplinary team and the patient\'s attending physician, when applicable, to oversee the hospice plan of care and help manage symptoms related to the patient\'s terminal illness.',
+  },
+  {
+    title: 'Skilled Nursing Care',
+    description: 'Hospice nurses assess the patient\'s condition, manage pain and other symptoms, provide education to patients and caregivers, coordinate medications and treatments, and help families understand changes in the patient\'s condition.',
+  },
+  {
+    title: 'Medical Equipment & Supplies',
+    description: 'When medically necessary and included in the hospice plan of care, we arrange equipment and supplies related to the patient\'s terminal illness and related conditions. These may include hospital beds, wheelchairs, walkers, bedside commodes, oxygen equipment, wound care supplies, and other necessary items.',
+  },
+  {
+    title: 'Hospice Aide Services',
+    description: 'Hospice aides provide personal care and assistance based on the patient\'s needs and plan of care. Services may include bathing, grooming, dressing, personal hygiene, and other activities that promote comfort and dignity.',
+  },
+  {
+    title: 'Physical, Occupational & Speech Therapy',
+    description: 'Therapy services may be provided when appropriate for symptom management or to help patients maintain functional abilities and activities of daily living. Services are based on the patient\'s individual needs and hospice plan of care.',
+  },
+  {
+    title: 'Social Work Services',
+    description: 'Hospice social workers provide emotional and psychosocial support to patients and families. They can also assist with advance care planning, caregiver concerns, community resources, and other practical needs related to the hospice journey.',
+  },
+  {
+    title: 'Spiritual Care',
+    description: 'Spiritual care is available according to each patient\'s and family\'s individual beliefs, values, traditions, and preferences. Our spiritual care team provides compassionate support and can also coordinate with the patient\'s own faith community when requested. Participation in spiritual or religious services is always based on the patient\'s wishes.',
+  },
+  {
+    title: 'Bereavement Support',
+    description: 'Grief and bereavement support is available to families and loved ones following a patient\'s death. Our bereavement services provide support, education, resources, and guidance as families navigate the grieving process.',
+  },
+  {
+    title: 'Volunteer Support',
+    description: 'Trained hospice volunteers may provide companionship and additional support to patients and families based on individual needs, preferences, and volunteer availability.',
+  },
 ]
 
 export const advantages = [

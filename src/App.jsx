@@ -10,7 +10,7 @@ import Reveal from './components/Reveal.jsx'
 import Faq from './components/Faq.jsx'
 import {
   agency,
-  services,
+  servicesDetailed,
   advantages,
   therapies,
   medicareCriteria,
@@ -249,33 +249,42 @@ export default function App() {
         {/* ---------- Services ---------- */}
         <section className="section" aria-labelledby="services-h">
           <div className="shell">
-            <div className="head-row">
-              <Reveal className="head">
-                <Eyebrow>Our Services</Eyebrow>
-                <h2 className="h2" id="services-h">
-                  Hospice services
-                </h2>
-                <p className="head__note">
-                  Every service below is part of the hospice benefit. There is
-                  nothing here to buy separately.
-                </p>
-              </Reveal>
-              <Reveal delay={90}>
-                <Figure
-                  src={photoWalker}
-                  alt="A nurse walking outdoors alongside a patient using a walker."
-                  ratio="1.04"
-                />
-              </Reveal>
-            </div>
-            <ul className="services">
-              {services.map((s, i) => (
-                <Reveal as="li" key={s} className="services__item" delay={i * 35}>
-                  <span className="services__ray" aria-hidden="true" />
-                  <span>{s}</span>
+            <Reveal className="head head--center">
+              <Eyebrow>Our Services</Eyebrow>
+              <h2 className="h2" id="services-h">
+                Hospice Services
+              </h2>
+              <p className="head__note">
+                Hospice care is designed around the individual needs of each patient and family. Our interdisciplinary team works together to provide services that promote comfort, dignity, symptom management, and quality of life.
+              </p>
+              <p className="head__note" style={{ marginTop: '16px' }}>
+                For eligible patients, services related to the terminal illness and related conditions are provided according to the patient's individualized hospice plan of care.
+              </p>
+            </Reveal>
+
+            <div className="services-grid">
+              {servicesDetailed.map((service, i) => (
+                <Reveal key={service.title} className="service-card" delay={(i % 3) * 60}>
+                  <h3 className="service-card__title">{service.title}</h3>
+                  <p className="service-card__description">{service.description}</p>
                 </Reveal>
               ))}
-            </ul>
+            </div>
+
+            <Reveal className="cta" style={{ marginTop: 'clamp(48px, 6vw, 72px)' }}>
+              <h3 className="h2" style={{ fontSize: '1.8rem', marginBottom: '16px' }}>
+                Care Designed Around You
+              </h3>
+              <p className="cta__text">
+                Every patient's hospice journey is different. Our interdisciplinary team develops an individualized plan of care based on the patient's condition, needs, goals, values, and preferences.
+              </p>
+              <p className="cta__text" style={{ fontWeight: '600', marginTop: '12px' }}>
+                Have questions about hospice services? Contact Haloes Touch Hospice to speak with our team or request a hospice evaluation.
+              </p>
+              <a className="btn btn--gold" href={telHref(agency.phone)}>
+                Call {agency.phone}
+              </a>
+            </Reveal>
           </div>
         </section>
 
@@ -401,8 +410,10 @@ export default function App() {
         <div className="shell footer__inner">
           <div className="footer__brand">
             <Eyebrow>Contact Us</Eyebrow>
-            <img src="/haloes-mark.png" alt="Haloes Touch" className="footer__mark" />
-            <p className="footer__name">{agency.name}</p>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
+              <img src="/haloes-mark.png" alt="Haloes Touch" className="footer__mark" style={{ margin: 0 }} />
+              <p className="footer__name" style={{ margin: 0 }}>{agency.name}</p>
+            </div>
             <p className="footer__tagline">
               Contact us to find out if Haloes Touch is the right choice for you.
             </p>
@@ -411,25 +422,21 @@ export default function App() {
           <div className="footer__cols">
             <div className="footer__col">
               <h2 className="footer__h">Visit</h2>
-              <p>{agency.street}</p>
+              <p style={{ whiteSpace: 'nowrap' }}>{agency.street}</p>
               <p>{agency.city}</p>
             </div>
             <div className="footer__col">
               <h2 className="footer__h">Call</h2>
-              <p>
+              <p style={{ whiteSpace: 'nowrap' }}>
                 <a href={telHref(agency.phone)}>{agency.phone}</a>
               </p>
-              <p>
-                <a href={telHref(agency.phoneAlt)}>{agency.phoneAlt}</a>
-              </p>
+              <h2 className="footer__h" style={{ marginTop: '8px' }}>Fax</h2>
+              <p style={{ whiteSpace: 'nowrap' }}>{agency.fax}</p>
             </div>
             <div className="footer__col">
-              <h2 className="footer__h">Write</h2>
+              <h2 className="footer__h">Email</h2>
               <p>
                 <a href={`mailto:${agency.email}`}>{agency.email}</a>
-              </p>
-              <p>
-                <a href={`https://${agency.site}`}>{agency.site}</a>
               </p>
             </div>
           </div>
