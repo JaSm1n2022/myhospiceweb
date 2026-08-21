@@ -217,10 +217,11 @@ export default function App() {
             <div className="mission-vision" style={{ marginTop: 'clamp(60px, 8vw, 100px)' }}>
               <Reveal>
                 <div className="mission-vision__section">
-                  <h3 className="h2" style={{ fontSize: 'clamp(1.6rem, 3.5vw, 2.4rem)', marginBottom: '16px' }}>
+                  <h3 className="h2" style={{ fontSize: 'clamp(1.6rem, 3.5vw, 2.4rem)', marginBottom: '0' }}>
                     Our Mission
                   </h3>
-                  <p className="prose prose--lead" style={{ marginBottom: '16px' }}>
+                  <span className="dot-rule dot-rule--wide" aria-hidden="true" />
+                  <p className="prose prose--lead mission-vision__tagline" style={{ marginBottom: '16px' }}>
                     Comfort, dignity, and compassionate care when it matters most.
                   </p>
                   <p className="prose">
@@ -237,10 +238,11 @@ export default function App() {
 
               <Reveal delay={90}>
                 <div className="mission-vision__section" style={{ marginTop: '48px' }}>
-                  <h3 className="h2" style={{ fontSize: 'clamp(1.6rem, 3.5vw, 2.4rem)', marginBottom: '16px' }}>
+                  <h3 className="h2" style={{ fontSize: 'clamp(1.6rem, 3.5vw, 2.4rem)', marginBottom: '0' }}>
                     Our Vision
                   </h3>
-                  <p className="prose prose--lead" style={{ marginBottom: '16px' }}>
+                  <span className="dot-rule dot-rule--wide" aria-hidden="true" />
+                  <p className="prose prose--lead mission-vision__tagline" style={{ marginBottom: '16px' }}>
                     A community where every person can experience life's final journey with dignity, comfort, and compassionate support.
                   </p>
                   <p className="prose">
@@ -479,6 +481,7 @@ export default function App() {
                   </span>
                   <div>
                     <h3 className="adv-item__title">{a.title}</h3>
+                    <span className="dot-rule" aria-hidden="true" />
                     <p className="adv-item__body">{a.body}</p>
                   </div>
                 </Reveal>
