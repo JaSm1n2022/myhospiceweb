@@ -13,6 +13,8 @@ import continuousHomeCare from '../source/continioushomecare1.png'
 import advantagePhoto from '../source/continoushomecare2.png'
 import respiteCare from '../source/homecare.png'
 import inpatientCare from '../source/hospitalcare.png'
+import overallCare from '../source/overallcare.png'
+import levelOfCare from '../source/levelofcare.png'
 import Reveal from './components/Reveal.jsx'
 import Faq from './components/Faq.jsx'
 import Reviews from './components/Reviews.jsx'
@@ -322,6 +324,14 @@ export default function App() {
                 <p className="levels-intro__subtitle">
                   The Right Level of Care for Every Stage of the Journey
                 </p>
+                <div className="levels-circle">
+                  <img
+                    src={levelOfCare}
+                    alt="Four levels of hospice care"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
                 <p className="prose" style={{ marginTop: '20px' }}>
                   Hospice care is designed to respond to each patient's changing needs. Depending on the patient's condition and circumstances, Medicare recognizes four levels of hospice care.
                 </p>
@@ -458,9 +468,19 @@ export default function App() {
                   If you are unsure which level of hospice care may be appropriate for you or your loved one, contact Haloes Touch Hospice. Our team can answer your questions, evaluate the patient's needs, and explain available hospice services.
                 </p>
               </div>
-              <a className="btn btn--gold" href={telHref(agency.phone)}>
-                Call {agency.phone}
-              </a>
+              <div className="cta-action">
+                <div className="cta-circle">
+                  <img
+                    src={overallCare}
+                    alt="Compassionate hospice care"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <a className="btn btn--gold" href={telHref(agency.phone)}>
+                  Call {agency.phone}
+                </a>
+              </div>
             </Reveal>
           </div>
         </section>

@@ -1038,6 +1038,64 @@ ul {
   display: block;
 }
 
+.cta-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.cta-circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.cta-circle::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  box-shadow: inset 0 0 60px 20px rgba(41, 84, 61, 0.4);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.cta-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.levels-circle {
+  margin: 24px auto;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.levels-circle::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  box-shadow: inset 0 0 60px 20px rgba(41, 84, 61, 0.4);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.levels-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .figure--tall {
   aspect-ratio: 0.58;
   border-radius: var(--radius-lg);
