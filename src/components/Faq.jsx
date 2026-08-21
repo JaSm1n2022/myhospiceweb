@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react'
 import Reveal from './Reveal.jsx'
 import { faqs } from '../data/content.js'
+import photoConsultation from '../../source/consultation.png'
 
 const INITIAL = 6
 const STEP = 4
@@ -34,17 +35,31 @@ export default function Faq() {
   return (
     <section className="section section--quiet" aria-labelledby="faq-h">
       <div className="shell">
-        <Reveal className="head head--center">
-          <p className="eyebrow">FAQ</p>
-          <h2 className="h2" id="faq-h">
-            Before you call
-          </h2>
-          <p className="head__note">
-            The things people most often want to know, and the honest answers.
-            If yours is not here, ask us on the phone — we would rather talk it
-            through.
-          </p>
-        </Reveal>
+        <div className="head-row">
+          <Reveal className="head">
+            <p className="eyebrow">FAQ</p>
+            <h2 className="h2" id="faq-h">
+              Before you call
+            </h2>
+            <p className="head__note">
+              The things people most often want to know, and the honest answers.
+              If yours is not here, ask us on the phone — we would rather talk it
+              through.
+            </p>
+          </Reveal>
+          <Reveal delay={90}>
+            <figure className="figure figure--faq">
+              <img
+                src={photoConsultation}
+                alt="A Haloes Touch consultation with a patient and family."
+                width="1400"
+                height="933"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+          </Reveal>
+        </div>
 
         <ul className="faq">
           {faqs.slice(0, shown).map((item, i) => (

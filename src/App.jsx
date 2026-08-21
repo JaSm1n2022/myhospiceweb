@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { Home, Users, Heart, Award, FileText, Mail, HelpCircle, Star, Shield } from 'lucide-react'
 import Halo from './components/Halo.jsx'
 import photoEmbrace from './assets/embrace.jpg'
@@ -626,13 +627,13 @@ export default function App() {
           <div className="footer__legal-section">
             <h3 className="footer__legal-h">Legal & Privacy</h3>
             <div className="footer__legal-links">
-              <a href="#privacy-policy">Privacy Policy</a>
+              <Link to="/privacy-policy">Privacy Policy</Link>
               <span className="footer__dot">•</span>
-              <a href="#terms-of-use">Terms of Use</a>
+              <Link to="/terms-of-use">Terms of Use</Link>
               <span className="footer__dot">•</span>
-              <a href="#notice-privacy">Notice of Privacy Practices</a>
+              <Link to="/notice-privacy-practices">Notice of Privacy Practices</Link>
               <span className="footer__dot">•</span>
-              <a href="#accessibility">Accessibility</a>
+              <Link to="/accessibility">Accessibility</Link>
             </div>
           </div>
         </div>
