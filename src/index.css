@@ -1012,6 +1012,32 @@ ul {
   opacity: 0;
 }
 
+.advantage-circle {
+  margin: 24px auto 0;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.advantage-circle::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  box-shadow: inset 0 0 60px 20px rgba(41, 84, 61, 0.4);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.advantage-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .figure--tall {
   aspect-ratio: 0.58;
   border-radius: var(--radius-lg);
@@ -1681,20 +1707,31 @@ ul {
 }
 
 .level-card__icon {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-  width: 56px;
-  height: 56px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   background: var(--gold);
   color: var(--forest-900);
-  margin-bottom: 20px;
+  margin: 0 auto 24px;
 }
 
 .level-card__icon svg {
-  width: 28px;
-  height: 28px;
+  width: 56px;
+  height: 56px;
+}
+
+.level-card__icon--image {
+  padding: 0;
+  overflow: hidden;
+}
+
+.level-card__icon--image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .level-card__title {
@@ -1704,6 +1741,7 @@ ul {
   color: var(--cream);
   margin-bottom: 12px;
   line-height: 1.3;
+  text-align: center;
 }
 
 .level-card__tagline {
@@ -1712,6 +1750,7 @@ ul {
   color: var(--gold);
   margin-bottom: 20px;
   font-style: italic;
+  text-align: center;
 }
 
 .level-card__text {
@@ -1892,6 +1931,9 @@ ul {
   }
   .svc-band__text--end .dot-rule {
     margin-left: auto;
+  }
+  .svc-band__text--end #advantage-h {
+    text-align: center;
   }
 }
 

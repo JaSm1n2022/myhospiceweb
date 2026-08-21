@@ -8,6 +8,11 @@ import photoElderlyChair from '../source/elderychair.png'
 import photoElderyCare from '../source/elderycare.png'
 import achcMark from '../source/achc-white.png'
 import elderHand from './assets/elderhand.png'
+import routineHomeCare from '../source/routinehomecare.png'
+import continuousHomeCare from '../source/continioushomecare1.png'
+import advantagePhoto from '../source/continoushomecare2.png'
+import respiteCare from '../source/homecare.png'
+import inpatientCare from '../source/hospitalcare.png'
 import Reveal from './components/Reveal.jsx'
 import Faq from './components/Faq.jsx'
 import Reviews from './components/Reviews.jsx'
@@ -328,8 +333,8 @@ export default function App() {
 
             <div className="levels-grid">
               <Reveal className="level-card" delay={0}>
-                <span className="level-card__icon">
-                  <ServiceIcon name="house-heart" />
+                <span className="level-card__icon level-card__icon--image">
+                  <img src={routineHomeCare} alt="" />
                 </span>
                 <h4 className="level-card__title">Routine Home Care</h4>
                 <p className="level-card__tagline">Care wherever you call home</p>
@@ -359,8 +364,8 @@ export default function App() {
               </Reveal>
 
               <Reveal className="level-card" delay={90}>
-                <span className="level-card__icon">
-                  <ServiceIcon name="heart-pulse" />
+                <span className="level-card__icon level-card__icon--image">
+                  <img src={continuousHomeCare} alt="" />
                 </span>
                 <h4 className="level-card__title">Continuous Home Care</h4>
                 <p className="level-card__tagline">Intensive support during a crisis</p>
@@ -386,8 +391,8 @@ export default function App() {
               </Reveal>
 
               <Reveal className="level-card" delay={0}>
-                <span className="level-card__icon">
-                  <ServiceIcon name="bed-single" />
+                <span className="level-card__icon level-card__icon--image">
+                  <img src={respiteCare} alt="" />
                 </span>
                 <h4 className="level-card__title">Inpatient Respite Care</h4>
                 <p className="level-card__tagline">Short-term relief for caregivers</p>
@@ -411,8 +416,8 @@ export default function App() {
               </Reveal>
 
               <Reveal className="level-card" delay={90}>
-                <span className="level-card__icon">
-                  <ServiceIcon name="hospital" />
+                <span className="level-card__icon level-card__icon--image">
+                  <img src={inpatientCare} alt="" />
                 </span>
                 <h4 className="level-card__title">General Inpatient Care</h4>
                 <p className="level-card__tagline">Intensive inpatient symptom management</p>
@@ -481,8 +486,16 @@ export default function App() {
                 <p className="eyebrow">{advantageIntro}</p>
                 <span className="dot-rule dot-rule--wide" aria-hidden="true" />
                 <h2 className="h2" id="advantage-h">
-                  The Haloes Touch advantage
+                  Our Advantage
                 </h2>
+                <div className="advantage-circle">
+                  <img
+                    src={advantagePhoto}
+                    alt="Compassionate hospice care"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
               </Reveal>
             </div>
 
