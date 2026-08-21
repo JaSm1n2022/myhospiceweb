@@ -77,3 +77,46 @@ export const medicareCriteria = [
     body: 'The patient chooses to forgo curative treatment in favor of symptom management, comfort, and quality of life.',
   },
 ]
+
+export const faqs = [
+  {
+    q: 'What is hospice care?',
+    a: 'Hospice care is specialized medical care focused on comfort and quality of life for people facing terminal illness. Our team provides pain management, symptom control, and emotional and spiritual support for both patients and their families.',
+  },
+  {
+    q: 'When is the right time to choose hospice?',
+    a: 'Hospice is appropriate when curative treatment is no longer effective or desired, and the focus shifts to comfort and quality of life. If a physician certifies a life expectancy of six months or less, hospice care can begin immediately.',
+  },
+  {
+    q: 'Where does hospice care take place?',
+    a: 'Most hospice care happens at home, where patients feel most comfortable. We also provide care in assisted living facilities, nursing homes, and hospitals. Our team comes to you, bringing all necessary medical equipment and supplies.',
+  },
+  {
+    q: 'Will I have to stop seeing my doctor?',
+    a: 'No. We work closely with your primary physician and coordinate all care. Your doctor remains involved in your treatment plan, and our hospice physician provides additional oversight specialized in end-of-life care.',
+  },
+  {
+    q: 'How much does hospice cost?',
+    a: 'Medicare covers hospice services at 100%, including medications, medical equipment, nursing care, and support services. Most private insurance and Medicaid also cover hospice care. We handle all billing and work with your insurance provider.',
+  },
+  {
+    q: 'Can hospice patients still go to the hospital?',
+    a: 'Yes, but our goal is to keep patients comfortable at home and avoid hospitalization when possible. If emergency care is needed, we coordinate with hospitals. Patients can also choose to leave hospice care at any time.',
+  },
+  {
+    q: 'What if the patient lives longer than six months?',
+    a: 'Hospice care can continue as long as the physician certifies that the illness remains terminal. Many patients receive hospice care for longer than six months, and we continue providing support for as long as needed.',
+  },
+  {
+    q: 'How often will someone from hospice visit?',
+    a: 'Visit frequency depends on individual needs. Typically, a nurse visits 1-3 times per week, and aides provide personal care several times weekly. Our team is available 24/7 by phone, and we can arrange urgent visits anytime.',
+  },
+  {
+    q: 'Does hospice mean giving up hope?',
+    a: 'Not at all. Hospice shifts hope from cure to comfort, quality time with loved ones, and living fully in the time remaining. Many families find hospice provides hope for peaceful, meaningful final days surrounded by support.',
+  },
+  {
+    q: 'What support does hospice provide to families?',
+    a: 'We provide counseling, respite care, spiritual support, and practical guidance for caregivers. After a patient passes, we offer bereavement support for up to 13 months to help families through the grieving process.',
+  },
+]

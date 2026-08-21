@@ -216,6 +216,7 @@ ul {
   font-weight: 400;
   line-height: 1.05;
   letter-spacing: 0.01em;
+  white-space: nowrap;
 }
 
 .brand__sub {
@@ -226,6 +227,7 @@ ul {
   text-transform: uppercase;
   color: var(--gold);
   margin-top: 3px;
+  white-space: nowrap;
 }
 
 .topbar__call {
@@ -268,6 +270,7 @@ ul {
   transition: opacity 0.2s var(--ease);
   padding: 12px 8px;
   border-radius: 8px;
+  white-space: nowrap;
 }
 
 .nav__link:hover {
@@ -277,6 +280,10 @@ ul {
 
 .nav__link svg {
   flex-shrink: 0;
+}
+
+.nav__link span {
+  white-space: nowrap;
 }
 
 .hamburger {
@@ -309,7 +316,7 @@ ul {
     flex-direction: row;
     position: static;
     align-items: center;
-    gap: 32px;
+    gap: 20px;
     flex: 1;
     justify-content: center;
     background: transparent;
@@ -322,7 +329,8 @@ ul {
 
   .nav__link {
     padding: 0;
-    gap: 6px;
+    gap: 5px;
+    font-size: 0.88rem;
   }
 
   .hamburger {
@@ -331,6 +339,17 @@ ul {
 
   .topbar__call {
     display: block;
+  }
+}
+
+@media (min-width: 1200px) {
+  .nav {
+    gap: 28px;
+  }
+
+  .nav__link {
+    font-size: 0.92rem;
+    gap: 6px;
   }
 }
 
@@ -439,12 +458,13 @@ ul {
 }
 
 .eyebrow {
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.2em;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--gold);
-  margin-bottom: 16px;
+  margin-bottom: 20px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .h2 {
@@ -932,5 +952,67 @@ ul {
   .hero__seal {
     font-size: 0.66rem;
     letter-spacing: 0.12em;
+  }
+}
+
+/* ---------------------------------------------------------
+   FAQ
+   --------------------------------------------------------- */
+.faq {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.faq__card {
+  background: rgba(245, 241, 228, 0.05);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  padding: 32px;
+  transition: background 0.3s var(--ease), border-color 0.3s var(--ease);
+}
+
+.faq__card:hover,
+.faq__card:focus-within {
+  background: rgba(245, 241, 228, 0.08);
+  border-color: rgba(245, 241, 228, 0.2);
+}
+
+.faq__q {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--gold);
+  margin-bottom: 12px;
+  line-height: 1.35;
+}
+
+.faq__a {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--cream);
+  opacity: 0.9;
+}
+
+.faq__more {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.faq__count {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 10px;
+  background: rgba(227, 188, 87, 0.15);
+  border-radius: 12px;
+  font-size: 0.85rem;
+  color: var(--gold);
+}
+
+@media (min-width: 768px) {
+  .faq {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
   }
 }

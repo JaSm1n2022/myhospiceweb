@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Home, Users, Heart, Award, FileText, Mail } from 'lucide-react'
+import { Home, Users, Heart, Award, FileText, Mail, HelpCircle } from 'lucide-react'
 import Halo from './components/Halo.jsx'
 import photoFamily from './assets/family.jpg'
 import photoWalker from './assets/nurse-walker.jpg'
@@ -7,6 +7,7 @@ import photoPark from './assets/wheelchair-park.jpg'
 import photoEmbrace from './assets/embrace.jpg'
 import achcMark from './assets/achc-accredited.png'
 import Reveal from './components/Reveal.jsx'
+import Faq from './components/Faq.jsx'
 import {
   agency,
   services,
@@ -52,6 +53,32 @@ export default function App() {
     setMobileMenuOpen(false)
   }
 
+  const scrollToSection = (e, sectionId) => {
+    e.preventDefault()
+    const element = document.getElementById(sectionId)
+    if (element) {
+      // For "main", scroll to the very top
+      if (sectionId === 'main') {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        })
+      } else {
+        // For sections, find the parent section element and scroll to its top
+        const section = element.closest('section') || element
+        const headerHeight = 90 // Account for sticky header
+        const elementPosition = section.getBoundingClientRect().top
+        const offsetPosition = elementPosition + window.pageYOffset - headerHeight
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        })
+      }
+    }
+    closeMobileMenu()
+  }
+
   return (
     <>
       <a className="skip" href="#main">
@@ -68,27 +95,31 @@ export default function App() {
             </span>
           </a>
           <nav className={`nav ${mobileMenuOpen ? 'nav--open' : ''}`}>
-            <a className="nav__link" href="#main" onClick={closeMobileMenu}>
+            <a className="nav__link" href="#main" onClick={(e) => scrollToSection(e, 'main')}>
               <Home size={18} />
               <span>Home</span>
             </a>
-            <a className="nav__link" href="#philosophy-h" onClick={closeMobileMenu}>
+            <a className="nav__link" href="#philosophy-h" onClick={(e) => scrollToSection(e, 'philosophy-h')}>
               <Users size={18} />
               <span>About Us</span>
             </a>
-            <a className="nav__link" href="#services-h" onClick={closeMobileMenu}>
+            <a className="nav__link" href="#services-h" onClick={(e) => scrollToSection(e, 'services-h')}>
               <Heart size={18} />
               <span>Services</span>
             </a>
-            <a className="nav__link" href="#advantage-h" onClick={closeMobileMenu}>
+            <a className="nav__link" href="#advantage-h" onClick={(e) => scrollToSection(e, 'advantage-h')}>
               <Award size={18} />
               <span>Why Choose Us</span>
             </a>
-            <a className="nav__link" href="#medicare-h" onClick={closeMobileMenu}>
+            <a className="nav__link" href="#faq-h" onClick={(e) => scrollToSection(e, 'faq-h')}>
+              <HelpCircle size={18} />
+              <span>FAQ</span>
+            </a>
+            <a className="nav__link" href="#medicare-h" onClick={(e) => scrollToSection(e, 'medicare-h')}>
               <FileText size={18} />
               <span>Medicare</span>
             </a>
-            <a className="nav__link" href="#contact" onClick={closeMobileMenu}>
+            <a className="nav__link" href="#contact" onClick={(e) => scrollToSection(e, 'contact')}>
               <Mail size={18} />
               <span>Contact Us</span>
             </a>
@@ -144,6 +175,7 @@ export default function App() {
         <section className="section section--quiet" aria-labelledby="philosophy-h">
           <div className="shell split">
             <Reveal className="split__left">
+              <Eyebrow>About Us</Eyebrow>
               <h2 className="h2" id="philosophy-h">
                 Bring comfort home.
                 <br />
@@ -175,7 +207,7 @@ export default function App() {
           <div className="shell">
             <div className="head-row">
               <Reveal className="head">
-                <Eyebrow>What we provide</Eyebrow>
+                <Eyebrow>Our Services</Eyebrow>
                 <h2 className="h2" id="services-h">
                   Hospice services
                 </h2>
@@ -208,7 +240,7 @@ export default function App() {
           <div className="shell">
             <div className="head-row">
               <Reveal className="head">
-                <Eyebrow>Why families choose us</Eyebrow>
+                <Eyebrow>Why Choose Us</Eyebrow>
                 <h2 className="h2" id="advantage-h">
                   The Haloes Touch advantage
                 </h2>
@@ -231,6 +263,9 @@ export default function App() {
             </div>
           </div>
         </section>
+
+        {/* ---------- FAQ ---------- */}
+        <Faq />
 
         {/* ---------- Levels of care ---------- */}
         <section className="section" aria-labelledby="care-h">
@@ -314,6 +349,7 @@ export default function App() {
       <footer className="footer" id="contact">
         <div className="shell footer__inner">
           <div className="footer__brand">
+            <Eyebrow>Contact Us</Eyebrow>
             <img src="/haloes-mark.png" alt="Haloes Touch" className="footer__mark" />
             <p className="footer__name">{agency.name}</p>
             <p className="footer__tagline">
