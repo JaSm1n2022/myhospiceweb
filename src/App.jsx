@@ -1,9 +1,6 @@
 import { useState } from 'react'
-import { Home, Users, Heart, Award, FileText, Mail, HelpCircle, Star, Stethoscope, Eye, Activity, Sparkles } from 'lucide-react'
+import { Home, Users, Heart, Award, FileText, Mail, HelpCircle, Star } from 'lucide-react'
 import Halo from './components/Halo.jsx'
-import photoFamily from './assets/family.jpg'
-import photoWalker from './assets/nurse-walker.jpg'
-import photoPark from './assets/wheelchair-park.jpg'
 import photoEmbrace from './assets/embrace.jpg'
 import photoCompassionate from '../source/compassionate.png'
 import photoElderlyChair from '../source/elderychair.png'
@@ -12,10 +9,11 @@ import elderHand from './assets/elderhand.png'
 import Reveal from './components/Reveal.jsx'
 import Faq from './components/Faq.jsx'
 import Reviews from './components/Reviews.jsx'
+import ServiceIcon from './components/ServiceIcon.jsx'
 import {
   agency,
-  servicesDetailed,
-  servicesSimple,
+  services,
+  servicesIntro,
   advantages,
   therapies,
   medicareCriteria,
@@ -255,52 +253,48 @@ export default function App() {
         {/* ---------- Services ---------- */}
         <section className="section" aria-labelledby="services-h">
           <div className="shell">
-            <div className="head-row head-row--services">
-              <Reveal className="head">
+            <div className="svc-band">
+              <Reveal className="svc-band__text">
                 <Eyebrow>Our Services</Eyebrow>
                 <h2 className="h2" id="services-h">
                   Hospice Services
                 </h2>
-                <p className="head__note">
-                  Hospice care is designed around the individual needs of each patient and family. Our interdisciplinary team works together to provide services that promote comfort, dignity, symptom management, and quality of life.
-                </p>
-                <p className="head__note" style={{ marginTop: '16px' }}>
-                  For eligible patients, services related to the terminal illness and related conditions are provided according to the patient's individualized hospice plan of care.
-                </p>
+                <span className="dot-rule dot-rule--wide" aria-hidden="true" />
+                {servicesIntro.map((para) => (
+                  <p className="prose" key={para.slice(0, 24)}>
+                    {para}
+                  </p>
+                ))}
               </Reveal>
-              <Reveal delay={90} className="head-row__image">
-                <Figure
-                  className="figure--services"
-                  src={photoElderlyChair}
-                  alt="A nurse pushing a patient in a wheelchair along a tree-lined path."
-                  ratio="1.04"
-                />
+
+              <Reveal className="svc-band__media" delay={90}>
+                <figure className="figure svc-band__figure">
+                  <img
+                    src={photoElderlyChair}
+                    alt="A Haloes Touch nurse walking a patient in a wheelchair along a tree-lined path."
+                    width="1400"
+                    height="933"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </figure>
               </Reveal>
             </div>
 
-            <div className="services-grid services-grid--simple">
-              {servicesSimple.map((service, i) => {
-                const iconMap = {
-                  Stethoscope,
-                  Eye,
-                  Activity,
-                  Heart,
-                  Users,
-                  Sparkles,
-                  Award,
-                }
-                const IconComponent = iconMap[service.icon]
-                return (
-                  <Reveal key={service.title} className="service-card service-card--simple" delay={(i % 4) * 60}>
-                    <div className="service-card__icon">
-                      {IconComponent && <IconComponent size={32} strokeWidth={1.5} />}
-                    </div>
-                    <h3 className="service-card__title">{service.title}</h3>
-                    <p className="service-card__description">{service.description}</p>
-                  </Reveal>
-                )
-              })}
-            </div>
+            <ul className="svc-grid">
+              {services.map((s, i) => (
+                <Reveal as="li" key={s.title} className="svc-item" delay={(i % 4) * 70}>
+                  <div className="svc-item__head">
+                    <span className="svc-item__icon">
+                      <ServiceIcon name={s.icon} />
+                    </span>
+                    <h3 className="svc-item__title">{s.title}</h3>
+                  </div>
+                  <span className="dot-rule" aria-hidden="true" />
+                  <p className="svc-item__body">{s.body}</p>
+                </Reveal>
+              ))}
+            </ul>
 
             {/* Four Levels of Hospice Care */}
             <Reveal style={{ marginTop: 'clamp(64px, 9vw, 100px)' }}>

@@ -9,6 +9,54 @@ export const agency = {
   city: 'Henderson, NV 89052',
 }
 
+export const servicesIntro = [
+  'Hospice care is designed around the individual needs of each patient and family. Our interdisciplinary team works together to provide services that promote comfort, dignity, symptom management, and quality of life.',
+  'For eligible patients, services related to the terminal illness and related conditions are provided according to the patient\'s individualized hospice plan of care.',
+]
+
+export const services = [
+  {
+    title: 'Hospice Physician Services',
+    body: 'Our hospice physician works with the interdisciplinary team and the patient\'s attending physician, when applicable, to oversee the hospice plan of care and help manage symptoms related to the patient\'s terminal illness.',
+    icon: 'physician',
+  },
+  {
+    title: 'Skilled Nursing Care',
+    body: 'Hospice nurses assess the patient\'s condition, manage pain and other symptoms, provide education to patients and caregivers, coordinate medications and treatments, and help families understand changes in the patient\'s condition.',
+    icon: 'nursing',
+  },
+  {
+    title: 'Medical Equipment & Supplies',
+    body: 'When medically necessary and included in the hospice plan of care, we arrange equipment and supplies related to the patient\'s terminal illness and related conditions.',
+    icon: 'equipment',
+  },
+  {
+    title: 'Hospice Aide Services',
+    body: 'Hospice aides provide personal care and assistance based on the patient\'s needs and plan of care. Services may include bathing, grooming, dressing, personal hygiene, and other activities that promote comfort and dignity.',
+    icon: 'aide',
+  },
+  {
+    title: 'Social Work Support',
+    body: 'Hospice social workers provide emotional and psychosocial support to patients and families. They can also assist with advance care planning, caregiver concerns, community resources, and other practical needs related to the hospice journey.',
+    icon: 'social',
+  },
+  {
+    title: 'Spiritual Care',
+    body: 'Spiritual care is available according to each patient\'s and family\'s individual beliefs, values, traditions, and preferences. Our spiritual care team provides compassionate support and can also coordinate with the patient\'s own faith community when requested.',
+    icon: 'spiritual',
+  },
+  {
+    title: 'Bereavement Support',
+    body: 'Grief and bereavement support is available to families and loved ones following a patient\'s death. Our bereavement services provide support, education, resources, and guidance as families navigate the grieving process.',
+    icon: 'bereavement',
+  },
+  {
+    title: 'Volunteer Support',
+    body: 'Trained hospice volunteers may provide companionship and additional support to patients and families based on individual needs, preferences, and volunteer availability.',
+    icon: 'volunteer',
+  },
+]
+
 export const servicesSimple = [
   {
     title: 'Hospice Physician Services',

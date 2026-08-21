@@ -32,7 +32,7 @@ export default function Faq() {
   }
 
   return (
-    <section className="section section--quiet" aria-labelledby="faq-h">
+    <section className="section section--quiet" id="faq" aria-labelledby="faq-h">
       <div className="shell">
         <Reveal className="head head--center">
           <p className="eyebrow">Questions families ask</p>

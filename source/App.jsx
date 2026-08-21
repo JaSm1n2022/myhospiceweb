@@ -1,13 +1,15 @@
 import Halo from './components/Halo.jsx'
 import photoFamily from './assets/family.jpg'
-import photoWalker from './assets/nurse-walker.jpg'
 import photoPark from './assets/wheelchair-park.jpg'
 import photoEmbrace from './assets/embrace.jpg'
-import achcMark from './assets/achc-accredited.png'
+import achcMark from './assets/achc-white.png'
+import haloesMark from './assets/haloes-mark.png'
 import Reveal from './components/Reveal.jsx'
+import Faq from './components/Faq.jsx'
+import Reviews from './components/Reviews.jsx'
+import Services from './components/Services.jsx'
 import {
   agency,
-  services,
   advantages,
   therapies,
   medicareCriteria,
@@ -21,13 +23,12 @@ function Eyebrow({ children }) {
 
 function AchcBadge({ small = false }) {
   return (
-    <img
-      className={`achc ${small ? 'achc--sm' : ''}`}
-      src={achcMark}
-      alt="ACHC Accredited"
-      width="276"
-      height="282"
-    />
+    <span className={`achc ${small ? 'achc--sm' : ''}`}>
+      {/* The pillar artwork carries "ACHC"; "Accredited" is set in type
+          beside it, so together they read as the full statement. */}
+      <img src={achcMark} alt="ACHC" width="140" height="140" />
+      <span className="achc__label">Accredited</span>
+    </span>
   )
 }
 
@@ -49,12 +50,17 @@ export default function App() {
       <header className="topbar">
         <div className="shell topbar__inner">
           <a className="brand" href="#main">
-            <Halo variant="mark" className="brand__mark" />
+            <img className="brand__mark" src={haloesMark} alt="" width="541" height="417" />
             <span className="brand__name">
               Haloes Touch
               <span className="brand__sub">Hospice Inc.</span>
             </span>
           </a>
+          <nav className="nav" aria-label="Sections">
+            <a href="#services">Services</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#faq">Questions</a>
+          </nav>
           <a className="btn btn--ghost topbar__call" href={telHref(agency.phone)}>
             Call {agency.phone}
           </a>
@@ -124,37 +130,7 @@ export default function App() {
         </section>
 
         {/* ---------- Services ---------- */}
-        <section className="section" aria-labelledby="services-h">
-          <div className="shell">
-            <div className="head-row">
-              <Reveal className="head">
-                <Eyebrow>What we provide</Eyebrow>
-                <h2 className="h2" id="services-h">
-                  Hospice services
-                </h2>
-                <p className="head__note">
-                  Every service below is part of the hospice benefit. There is
-                  nothing here to buy separately.
-                </p>
-              </Reveal>
-              <Reveal delay={90}>
-                <Figure
-                  src={photoWalker}
-                  alt="A nurse walking outdoors alongside a patient using a walker."
-                  ratio="1.04"
-                />
-              </Reveal>
-            </div>
-            <ul className="services">
-              {services.map((s, i) => (
-                <Reveal as="li" key={s} className="services__item" delay={i * 35}>
-                  <span className="services__ray" aria-hidden="true" />
-                  <span>{s}</span>
-                </Reveal>
-              ))}
-            </ul>
-          </div>
-        </section>
+        <Services />
 
         {/* ---------- Advantage ---------- */}
         <section className="section section--quiet" aria-labelledby="advantage-h">
@@ -230,6 +206,9 @@ export default function App() {
           </div>
         </section>
 
+        {/* ---------- Reviews ---------- */}
+        <Reviews />
+
         {/* ---------- Medicare ---------- */}
         <section className="section section--light" aria-labelledby="medicare-h">
           <div className="shell">
@@ -275,13 +254,15 @@ export default function App() {
             </Reveal>
           </div>
         </section>
+        {/* ---------- FAQ ---------- */}
+        <Faq />
       </main>
 
       {/* ---------- Footer ---------- */}
       <footer className="footer" id="contact">
         <div className="shell footer__inner">
           <div className="footer__brand">
-            <Halo variant="mark" className="footer__mark" />
+            <img className="footer__mark" src={haloesMark} alt="" width="541" height="417" />
             <p className="footer__name">{agency.name}</p>
             <p className="footer__tagline">
               Contact us to find out if Haloes Touch is the right choice for you.

@@ -3,40 +3,15 @@ import { useId } from 'react'
 /**
  * The halo: an open ring of woven rays, drawn from the agency's logo mark.
  *
- * variant="ring" — the hero corona. Centre stays clear so the headline sits
- *   inside it. Rays fade in and out through a radial mask so the edge is soft
- *   rather than spiked. On load they draw outward from the top in both
- *   directions, then hold. This is the only orchestrated motion on the page.
- * variant="mark" — a small, high-contrast version for the logo lockup.
+ * The centre stays clear so the headline sits inside it. Rays fade in and out
+ * through a radial mask so the edge is soft rather than spiked, and they draw
+ * outward from the top in both directions on load, then hold. This is the only
+ * orchestrated motion on the page. The agency's actual logo is a raster in
+ * src/assets — this is an ambient companion to it, not a substitute.
  */
-export default function Halo({ variant = 'ring', animate = false, className = '' }) {
+export default function Halo({ animate = false, className = '' }) {
   const uid = useId().replace(/:/g, '')
   const C = 200
-
-  if (variant === 'mark') {
-    const rays = Array.from({ length: 16 }, (_, i) => {
-      const theta = (i / 16) * Math.PI * 2 - Math.PI / 2
-      const long = i % 4 === 0
-      const r1 = long ? 186 : 132
-      return {
-        x1: C + Math.cos(theta) * 44,
-        y1: C + Math.sin(theta) * 44,
-        x2: C + Math.cos(theta) * r1,
-        y2: C + Math.sin(theta) * r1,
-        w: long ? 22 : 13,
-        o: long ? 1 : 0.62,
-      }
-    })
-    return (
-      <svg className={`halo ${className}`} viewBox="0 0 400 400" aria-hidden="true" focusable="false">
-        <g stroke="var(--gold)" fill="none" strokeLinecap="round">
-          {rays.map((r, i) => (
-            <line key={i} x1={r.x1} y1={r.y1} x2={r.x2} y2={r.y2} strokeWidth={r.w} opacity={r.o} />
-          ))}
-        </g>
-      </svg>
-    )
-  }
 
   const count = 84
   const inner = 106
