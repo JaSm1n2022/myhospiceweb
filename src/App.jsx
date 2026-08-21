@@ -15,6 +15,8 @@ import respiteCare from '../source/homecare.png'
 import inpatientCare from '../source/hospitalcare.png'
 import overallCare from '../source/overallcare.png'
 import levelOfCare from '../source/levelofcare.png'
+import ourMission from '../source/ourmission.png'
+import ourVision from '../source/vision.png'
 import Reveal from './components/Reveal.jsx'
 import Faq from './components/Faq.jsx'
 import Reviews from './components/Reviews.jsx'
@@ -228,7 +230,15 @@ export default function App() {
 
             <div className="mission-vision" style={{ marginTop: 'clamp(60px, 8vw, 100px)' }}>
               <Reveal>
-                <div className="mission-vision__section">
+                <div className="mission-vision__section mission-vision__section--with-image">
+                  <div className="mission-circle">
+                    <img
+                      src={ourMission}
+                      alt="Our mission"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
                   <h3 className="h2" style={{ fontSize: 'clamp(1.6rem, 3.5vw, 2.4rem)', marginBottom: '0' }}>
                     Our Mission
                   </h3>
@@ -249,7 +259,15 @@ export default function App() {
               </Reveal>
 
               <Reveal delay={90}>
-                <div className="mission-vision__section" style={{ marginTop: '48px' }}>
+                <div className="mission-vision__section mission-vision__section--with-image" style={{ marginTop: '48px' }}>
+                  <div className="mission-circle">
+                    <img
+                      src={ourVision}
+                      alt="Our vision"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
                   <h3 className="h2" style={{ fontSize: 'clamp(1.6rem, 3.5vw, 2.4rem)', marginBottom: '0' }}>
                     Our Vision
                   </h3>
