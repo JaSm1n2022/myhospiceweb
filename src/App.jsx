@@ -6,6 +6,7 @@ import photoWalker from './assets/nurse-walker.jpg'
 import photoPark from './assets/wheelchair-park.jpg'
 import photoEmbrace from './assets/embrace.jpg'
 import achcMark from './assets/achc-accredited.png'
+import elderHand from './assets/elderhand.png'
 import Reveal from './components/Reveal.jsx'
 import Faq from './components/Faq.jsx'
 import Reviews from './components/Reviews.jsx'
@@ -146,19 +147,16 @@ export default function App() {
 
       <main id="main">
         {/* ---------- Hero ---------- */}
-        <section className="hero">
+        <section className="hero section--about" style={{ '--bg-image': `url(${elderHand})` }}>
           <div className="hero__halo">
             <Halo animate />
           </div>
           <div className="shell hero__inner">
             <h1 className="hero__title">
-              Compassion and care
-              <br />
-              that feels like family.
+              Compassion and care that feels like family.
             </h1>
             <p className="hero__lede">
-              Hospice care at home in Henderson and Las Vegas — nurses, physicians,
-              and therapists who show up when you need them, day or night.
+              Providing personalized hospice care wherever you call home in Las Vegas and Henderson — supporting patients and families with comfort, dignity, and compassionate care every step of the way.
             </p>
             <div className="hero__actions">
               <a className="btn btn--gold" href={telHref(agency.phone)}>
