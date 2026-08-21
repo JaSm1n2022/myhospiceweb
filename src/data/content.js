@@ -26,10 +26,10 @@ export const servicesDetailed = [
     title: 'Hospice Aide Services',
     description: 'Hospice aides provide personal care and assistance based on the patient\'s needs and plan of care. Services may include bathing, grooming, dressing, personal hygiene, and other activities that promote comfort and dignity.',
   },
-  {
-    title: 'Physical, Occupational & Speech Therapy',
-    description: 'Therapy services may be provided when appropriate for symptom management or to help patients maintain functional abilities and activities of daily living. Services are based on the patient\'s individual needs and hospice plan of care.',
-  },
+  // {
+  //   title: 'Physical, Occupational & Speech Therapy',
+  //   description: 'Therapy services may be provided when appropriate for symptom management or to help patients maintain functional abilities and activities of daily living. Services are based on the patient\'s individual needs and hospice plan of care.',
+  // },
   {
     title: 'Social Work Services',
     description: 'Hospice social workers provide emotional and psychosocial support to patients and families. They can also assist with advance care planning, caregiver concerns, community resources, and other practical needs related to the hospice journey.',
