@@ -369,10 +369,10 @@ ul {
 
 .hero__halo {
   position: absolute;
-  top: clamp(-210px, -11vw, -90px);
+  top: 50%;
   left: 50%;
   width: min(740px, 122vw);
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   opacity: 0.55;
   pointer-events: none;
 }
