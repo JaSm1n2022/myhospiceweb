@@ -56,6 +56,33 @@ const paths = {
       <path d="M5.2 13.4a2 2 0 0 0-2.1 2v1.4M18.8 13.4a2 2 0 0 1 2.1 2v1.4" />
     </>
   ),
+  'house-heart': (
+    <>
+      <path d="M3 10l9-7 9 7v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-9z" />
+      <path d="M12 15.5s-2.6-1.6-2.6-3.3a1.5 1.5 0 0 1 2.6-1 1.5 1.5 0 0 1 2.6 1c0 1.7-2.6 3.3-2.6 3.3z" />
+    </>
+  ),
+  'heart-pulse': (
+    <>
+      <path d="M12 20.4S3.4 15.1 3.4 9.1a4.7 4.7 0 0 1 8.6-2.7 4.7 4.7 0 0 1 8.6 2.7c0 6-8.6 11.3-8.6 11.3z" />
+      <path d="M6 11h2.5l2 3 2-6 2 3H18" />
+    </>
+  ),
+  'bed-single': (
+    <>
+      <path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6" />
+      <path d="M3 18v3M21 18v3" />
+      <circle cx="7.5" cy="7" r="2" />
+      <path d="M3 12V9a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v3" />
+    </>
+  ),
+  hospital: (
+    <>
+      <path d="M6 3h12v18H6z" />
+      <path d="M6 8h12M6 13h12M6 18h12" />
+      <path d="M12 3v6M9 6h6" />
+    </>
+  ),
 }
 
 export default function ServiceIcon({ name }) {

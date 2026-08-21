@@ -328,9 +328,11 @@ export default function App() {
 
             <div className="levels-grid">
               <Reveal className="level-card" delay={0}>
-                <div className="level-card__number">1</div>
+                <span className="level-card__icon">
+                  <ServiceIcon name="house-heart" />
+                </span>
                 <h4 className="level-card__title">Routine Home Care</h4>
-                <p className="level-card__tagline">Comfort and support wherever you call home.</p>
+                <p className="level-card__tagline">Care wherever you call home</p>
                 <p className="level-card__text">
                   Routine Home Care is the most common level of hospice care. It is provided when a patient is receiving hospice services in their place of residence and does not require Continuous Home Care or General Inpatient Care.
                 </p>
@@ -357,9 +359,11 @@ export default function App() {
               </Reveal>
 
               <Reveal className="level-card" delay={90}>
-                <div className="level-card__number">2</div>
+                <span className="level-card__icon">
+                  <ServiceIcon name="heart-pulse" />
+                </span>
                 <h4 className="level-card__title">Continuous Home Care</h4>
-                <p className="level-card__tagline">Additional care during periods of crisis.</p>
+                <p className="level-card__tagline">Intensive support during a crisis</p>
                 <p className="level-card__text">
                   Continuous Home Care may be provided during a period of crisis when a patient experiences acute medical symptoms that require intensive hospice care to achieve palliation and symptom management while remaining at home.
                 </p>
@@ -382,9 +386,11 @@ export default function App() {
               </Reveal>
 
               <Reveal className="level-card" delay={0}>
-                <div className="level-card__number">3</div>
+                <span className="level-card__icon">
+                  <ServiceIcon name="bed-single" />
+                </span>
                 <h4 className="level-card__title">Inpatient Respite Care</h4>
-                <p className="level-card__tagline">Temporary relief for caregivers.</p>
+                <p className="level-card__tagline">Short-term relief for caregivers</p>
                 <p className="level-card__text">
                   Caring for someone with a life-limiting illness can be physically and emotionally demanding. Inpatient Respite Care provides short-term relief for the patient's caregiver when respite is needed.
                 </p>
@@ -405,9 +411,11 @@ export default function App() {
               </Reveal>
 
               <Reveal className="level-card" delay={90}>
-                <div className="level-card__number">4</div>
+                <span className="level-card__icon">
+                  <ServiceIcon name="hospital" />
+                </span>
                 <h4 className="level-card__title">General Inpatient Care</h4>
-                <p className="level-card__tagline">Intensive symptom management when symptoms cannot be managed in another setting.</p>
+                <p className="level-card__tagline">Intensive inpatient symptom management</p>
                 <p className="level-card__text">
                   General Inpatient Care, or GIP, is a short-term level of hospice care for patients experiencing pain or other acute symptoms that cannot feasibly be managed in their current setting.
                 </p>
@@ -634,6 +642,8 @@ export default function App() {
               <Link to="/notice-privacy-practices">Notice of Privacy Practices</Link>
               <span className="footer__dot">•</span>
               <Link to="/accessibility">Accessibility</Link>
+              <span className="footer__dot">•</span>
+              <Link to="/ai-image-notice">AI & Illustrative Image Notice</Link>
             </div>
           </div>
         </div>

@@ -6,6 +6,7 @@ import PrivacyPolicy from './pages/PrivacyPolicy.jsx'
 import TermsOfUse from './pages/TermsOfUse.jsx'
 import NoticePrivacyPractices from './pages/NoticePrivacyPractices.jsx'
 import Accessibility from './pages/Accessibility.jsx'
+import AiImageNotice from './pages/AiImageNotice.jsx'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -17,6 +18,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/terms-of-use" element={<TermsOfUse />} />
         <Route path="/notice-privacy-practices" element={<NoticePrivacyPractices />} />
         <Route path="/accessibility" element={<Accessibility />} />
+        <Route path="/ai-image-notice" element={<AiImageNotice />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

@@ -1,5 +1,7 @@
 import Reveal from './Reveal.jsx'
 import { reviews, reviewsLink } from '../data/content.js'
+import photoSharing from '../../source/sharing.png'
+import { Heart } from 'lucide-react'
 
 /**
  * Three review cards. Deliberately three and no carousel: a family reads all
@@ -9,12 +11,27 @@ export default function Reviews() {
   return (
     <section className="section" id="reviews" aria-labelledby="reviews-h">
       <div className="shell">
-        <Reveal className="head head--center">
-          <p className="eyebrow">In their words</p>
-          <h2 className="h2" id="reviews-h">
-            What families say
-          </h2>
-        </Reveal>
+        <div className="head-row head-row--reverse">
+          <Reveal delay={90}>
+            <figure className="figure figure--reviews">
+              <img
+                src={photoSharing}
+                alt="A Haloes Touch staff member sharing a moment with a patient."
+                width="1400"
+                height="933"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+          </Reveal>
+          <Reveal className="head">
+            <Heart className="head__icon" size={32} strokeWidth={1.5} />
+            <p className="eyebrow">In their words</p>
+            <h2 className="h2" id="reviews-h">
+              What families say
+            </h2>
+          </Reveal>
+        </div>
 
         <ul className="reviews">
           {reviews.map((r, i) => (

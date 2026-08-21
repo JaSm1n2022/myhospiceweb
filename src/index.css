@@ -541,6 +541,11 @@ ul {
   color: var(--cream-70);
 }
 
+.head__icon {
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
 .head--center .head__note {
   margin-inline: auto;
 }
@@ -948,6 +953,65 @@ ul {
   opacity: 0;
 }
 
+.figure--reviews {
+  border: none;
+  overflow: visible;
+}
+
+.figure--reviews img {
+  border-radius: var(--radius);
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.3) 5%,
+    rgba(0, 0, 0, 0.7) 12%,
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0.7) 88%,
+    rgba(0, 0, 0, 0.3) 95%,
+    rgba(0, 0, 0, 0) 100%
+  ),
+  linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.3) 5%,
+    rgba(0, 0, 0, 0.7) 12%,
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0.7) 88%,
+    rgba(0, 0, 0, 0.3) 95%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.3) 5%,
+    rgba(0, 0, 0, 0.7) 12%,
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0.7) 88%,
+    rgba(0, 0, 0, 0.3) 95%,
+    rgba(0, 0, 0, 0) 100%
+  ),
+  linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.3) 5%,
+    rgba(0, 0, 0, 0.7) 12%,
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0.7) 88%,
+    rgba(0, 0, 0, 0.3) 95%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask-composite: intersect;
+  -webkit-mask-composite: source-in;
+}
+
+.figure--reviews::after {
+  opacity: 0;
+}
+
 .figure--tall {
   aspect-ratio: 0.58;
   border-radius: var(--radius-lg);
@@ -985,6 +1049,14 @@ ul {
     grid-template-columns: 1fr 0.82fr;
     gap: clamp(48px, 7vw, 80px);
     align-items: center;
+  }
+
+  .head-row--reverse {
+    grid-template-columns: 0.82fr 1fr;
+  }
+
+  .head-row--reverse .figure--reviews {
+    order: -1;
   }
 }
 
@@ -1608,19 +1680,21 @@ ul {
   transform: translateY(-2px);
 }
 
-.level-card__number {
+.level-card__icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   background: var(--gold);
   color: var(--forest-900);
-  font-family: var(--display);
-  font-size: 1.4rem;
-  font-weight: 600;
   margin-bottom: 20px;
+}
+
+.level-card__icon svg {
+  width: 28px;
+  height: 28px;
 }
 
 .level-card__title {
