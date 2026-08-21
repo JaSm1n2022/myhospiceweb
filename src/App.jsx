@@ -254,18 +254,27 @@ export default function App() {
         {/* ---------- Services ---------- */}
         <section className="section" aria-labelledby="services-h">
           <div className="shell">
-            <Reveal className="head head--center">
-              <Eyebrow>Our Services</Eyebrow>
-              <h2 className="h2" id="services-h">
-                Hospice Services
-              </h2>
-              <p className="head__note">
-                Hospice care is designed around the individual needs of each patient and family. Our interdisciplinary team works together to provide services that promote comfort, dignity, symptom management, and quality of life.
-              </p>
-              <p className="head__note" style={{ marginTop: '16px' }}>
-                For eligible patients, services related to the terminal illness and related conditions are provided according to the patient's individualized hospice plan of care.
-              </p>
-            </Reveal>
+            <div className="head-row">
+              <Reveal className="head">
+                <Eyebrow>Our Services</Eyebrow>
+                <h2 className="h2" id="services-h">
+                  Hospice Services
+                </h2>
+                <p className="head__note">
+                  Hospice care is designed around the individual needs of each patient and family. Our interdisciplinary team works together to provide services that promote comfort, dignity, symptom management, and quality of life.
+                </p>
+                <p className="head__note" style={{ marginTop: '16px' }}>
+                  For eligible patients, services related to the terminal illness and related conditions are provided according to the patient's individualized hospice plan of care.
+                </p>
+              </Reveal>
+              <Reveal delay={90}>
+                <Figure
+                  src={photoPark}
+                  alt="A nurse pushing a patient in a wheelchair along a tree-lined path."
+                  ratio="1.04"
+                />
+              </Reveal>
+            </div>
 
             <div className="services-grid">
               {servicesDetailed.map((service, i) => (
@@ -454,37 +463,6 @@ export default function App() {
 
         {/* ---------- FAQ ---------- */}
         <Faq />
-
-        {/* ---------- Levels of care ---------- */}
-        <section className="section" aria-labelledby="care-h">
-          <div className="shell">
-            <Reveal className="head">
-              <Eyebrow>When needs change</Eyebrow>
-              <h2 className="h2" id="care-h">
-                Care that meets the moment
-              </h2>
-            </Reveal>
-            <div className="care">
-              <Reveal className="care__media">
-                <Figure
-                  src={photoPark}
-                  alt="A nurse pushing a patient in a wheelchair along a tree-lined path."
-                  className="figure--tall"
-                />
-              </Reveal>
-              <div className="care__panels">
-              <Reveal className="panel">
-                <h3 className="panel__title">Continuous care</h3>
-                <p className="prose">
-                  Continuous care relieves acute medical symptoms and keeps the
-                  patient at home instead of the hospital. We bring it in during brief
-                  periods of crisis, for as long as it is medically needed.
-                </p>
-              </Reveal>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* ---------- Medicare ---------- */}
         <section className="section section--light" aria-labelledby="medicare-h">

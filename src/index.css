@@ -735,11 +735,13 @@ ul {
 
 .head-row .head {
   margin-bottom: 0;
+  max-width: 100%;
 }
 
 @media (min-width: 900px) {
   .head-row {
     grid-template-columns: 1fr 0.82fr;
+    gap: clamp(48px, 7vw, 80px);
     align-items: center;
   }
 }
