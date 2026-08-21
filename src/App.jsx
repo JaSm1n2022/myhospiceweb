@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Home, Users, Heart, Award, FileText, Mail } from 'lucide-react'
 import Halo from './components/Halo.jsx'
 import photoFamily from './assets/family.jpg'
 import photoWalker from './assets/nurse-walker.jpg'
@@ -67,12 +68,30 @@ export default function App() {
             </span>
           </a>
           <nav className={`nav ${mobileMenuOpen ? 'nav--open' : ''}`}>
-            <a className="nav__link" href="#main" onClick={closeMobileMenu}>Home</a>
-            <a className="nav__link" href="#philosophy-h" onClick={closeMobileMenu}>About Us</a>
-            <a className="nav__link" href="#services-h" onClick={closeMobileMenu}>Services</a>
-            <a className="nav__link" href="#advantage-h" onClick={closeMobileMenu}>Why Choose Us</a>
-            <a className="nav__link" href="#medicare-h" onClick={closeMobileMenu}>Medicare</a>
-            <a className="nav__link" href="#contact" onClick={closeMobileMenu}>Contact Us</a>
+            <a className="nav__link" href="#main" onClick={closeMobileMenu}>
+              <Home size={18} />
+              <span>Home</span>
+            </a>
+            <a className="nav__link" href="#philosophy-h" onClick={closeMobileMenu}>
+              <Users size={18} />
+              <span>About Us</span>
+            </a>
+            <a className="nav__link" href="#services-h" onClick={closeMobileMenu}>
+              <Heart size={18} />
+              <span>Services</span>
+            </a>
+            <a className="nav__link" href="#advantage-h" onClick={closeMobileMenu}>
+              <Award size={18} />
+              <span>Why Choose Us</span>
+            </a>
+            <a className="nav__link" href="#medicare-h" onClick={closeMobileMenu}>
+              <FileText size={18} />
+              <span>Medicare</span>
+            </a>
+            <a className="nav__link" href="#contact" onClick={closeMobileMenu}>
+              <Mail size={18} />
+              <span>Contact Us</span>
+            </a>
           </nav>
           <button
             className="hamburger"

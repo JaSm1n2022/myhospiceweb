@@ -257,6 +257,9 @@ ul {
 }
 
 .nav__link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   text-decoration: none;
   font-size: 0.95rem;
   font-weight: 500;
@@ -270,6 +273,10 @@ ul {
 .nav__link:hover {
   opacity: 1;
   background: rgba(245, 241, 228, 0.05);
+}
+
+.nav__link svg {
+  flex-shrink: 0;
 }
 
 .hamburger {
@@ -315,6 +322,7 @@ ul {
 
   .nav__link {
     padding: 0;
+    gap: 6px;
   }
 
   .hamburger {
