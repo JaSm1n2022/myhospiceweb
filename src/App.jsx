@@ -171,34 +171,78 @@ export default function App() {
           </div>
         </section>
 
-        {/* ---------- Philosophy ---------- */}
+        {/* ---------- About Us ---------- */}
         <section className="section section--quiet" aria-labelledby="philosophy-h">
-          <div className="shell split">
-            <Reveal className="split__left">
-              <Eyebrow>About Us</Eyebrow>
-              <h2 className="h2" id="philosophy-h">
-                Bring comfort home.
-                <br />
-                One visit at a time.
-              </h2>
-              <Figure
-                className="figure--philosophy"
-                src={photoFamily}
-                alt="A Haloes Touch nurse leaning beside a seated patient, both smiling."
-                ratio="0.79"
-              />
-            </Reveal>
-            <Reveal className="split__right" delay={80}>
-              <p className="prose prose--lead">
-                Haloes Touch prioritizes the comfort and care of people facing a
-                terminal illness. Our philosophy is to view this challenging phase as
-                a celebration of life, and a chance to cherish the time that is left.
-              </p>
-              <p className="prose">
-                We share an unwavering commitment to helping people make the most of
-                each day — one person, one family, and one community at a time.
-              </p>
-            </Reveal>
+          <div className="shell">
+            <div className="split">
+              <Reveal className="split__left">
+                <Eyebrow>About Us</Eyebrow>
+                <h2 className="h2" id="philosophy-h">
+                  Bring comfort home.
+                  <br />
+                  One visit at a time.
+                </h2>
+                <Figure
+                  className="figure--philosophy"
+                  src={photoFamily}
+                  alt="A Haloes Touch nurse leaning beside a seated patient, both smiling."
+                  ratio="0.79"
+                />
+              </Reveal>
+              <Reveal className="split__right" delay={80}>
+                <p className="prose prose--lead">
+                  At <strong>Haloes Touch Hospice</strong>, we believe every person deserves to experience comfort, dignity, and compassionate care throughout life's most challenging moments.
+                </p>
+                <p className="prose">
+                  We provide individualized hospice care for people facing life-limiting illnesses, supporting not only their physical needs but also their emotional, psychosocial, and spiritual well-being.
+                </p>
+                <p className="prose">
+                  Our philosophy is centered on honoring life and helping patients and families make the most of each day. We focus on what matters most to each person—comfort, meaningful moments with loved ones, personal wishes, and quality of life.
+                </p>
+                <p className="prose">
+                  With compassion and respect, we are committed to supporting our patients and their families throughout their hospice journey—<strong>one person, one family, and one community at a time.</strong>
+                </p>
+              </Reveal>
+            </div>
+
+            <div className="mission-vision" style={{ marginTop: 'clamp(60px, 8vw, 100px)' }}>
+              <Reveal>
+                <div className="mission-vision__section">
+                  <h3 className="h2" style={{ fontSize: 'clamp(1.6rem, 3.5vw, 2.4rem)', marginBottom: '16px' }}>
+                    Our Mission
+                  </h3>
+                  <p className="prose prose--lead" style={{ marginBottom: '16px' }}>
+                    Comfort, dignity, and compassionate care when it matters most.
+                  </p>
+                  <p className="prose">
+                    Our mission is to provide compassionate, patient-centered hospice care that promotes comfort, dignity, and quality of life for individuals facing life-limiting illnesses.
+                  </p>
+                  <p className="prose">
+                    Through an interdisciplinary approach, we support the physical, emotional, psychosocial, and spiritual needs of our patients while providing education, guidance, and support to their families and caregivers.
+                  </p>
+                  <p className="prose">
+                    We are committed to honoring each patient's values, choices, and goals while helping families make every moment as meaningful and comfortable as possible.
+                  </p>
+                </div>
+              </Reveal>
+
+              <Reveal delay={90}>
+                <div className="mission-vision__section" style={{ marginTop: '48px' }}>
+                  <h3 className="h2" style={{ fontSize: 'clamp(1.6rem, 3.5vw, 2.4rem)', marginBottom: '16px' }}>
+                    Our Vision
+                  </h3>
+                  <p className="prose prose--lead" style={{ marginBottom: '16px' }}>
+                    A community where every person can experience life's final journey with dignity, comfort, and compassionate support.
+                  </p>
+                  <p className="prose">
+                    Our vision is to be a trusted source of hospice care for patients and families in our community—recognized for compassion, respect, quality, and a deeply personal approach to care.
+                  </p>
+                  <p className="prose">
+                    We envision a future where individuals facing life-limiting illness and the people who love them feel supported, heard, respected, and never alone throughout their hospice journey.
+                  </p>
+                </div>
+              </Reveal>
+            </div>
           </div>
         </section>
 
@@ -302,13 +346,15 @@ export default function App() {
         <section className="section section--light" aria-labelledby="medicare-h">
           <div className="shell">
             <Reveal className="head head--center">
-              <Eyebrow>Paying for care</Eyebrow>
+              <Eyebrow>Paying for Hospice Care</Eyebrow>
               <h2 className="h2" id="medicare-h">
-                Medicare coverage
+                Medicare Coverage
               </h2>
               <p className="head__note">
-                Most hospice patients qualify for Medicare, which covers hospice
-                services up to 100%. Four things determine eligibility.
+                Medicare Part A covers hospice care for eligible beneficiaries through the Medicare Hospice Benefit. For covered hospice services related to the terminal illness and related conditions, patients generally pay no cost for hospice care, although certain copayments or coinsurance may apply.
+              </p>
+              <p className="head__note" style={{ marginTop: '16px' }}>
+                To qualify for the Medicare Hospice Benefit, the following requirements must be met:
               </p>
             </Reveal>
             <div className="criteria">
@@ -333,9 +379,14 @@ export default function App() {
               ))}
             </div>
             <Reveal className="cta">
+              <h3 className="h2" style={{ fontSize: '1.8rem', marginBottom: '16px' }}>
+                Have Questions About Coverage?
+              </h3>
               <p className="cta__text">
-                Not sure whether you or your family member qualifies? Call us and we
-                will check with you, at no cost.
+                Our hospice team can help you understand hospice eligibility, Medicare coverage, and the services available to you or your loved one.
+              </p>
+              <p className="cta__text" style={{ fontWeight: '600', marginTop: '12px' }}>
+                Contact Haloes Touch Hospice Inc. to learn more or request a hospice evaluation.
               </p>
               <a className="btn btn--forest" href={telHref(agency.phone)}>
                 Call {agency.phone}

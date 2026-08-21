@@ -1004,10 +1004,12 @@ ul {
   display: inline-block;
   margin-left: 8px;
   padding: 2px 10px;
-  background: rgba(227, 188, 87, 0.15);
+  background: rgba(227, 188, 87, 0.25);
   border-radius: 12px;
   font-size: 0.85rem;
-  color: var(--gold);
+  color: var(--gold) !important;
+  font-weight: 600;
+  opacity: 1;
 }
 
 @media (min-width: 768px) {
@@ -1015,4 +1017,25 @@ ul {
     grid-template-columns: repeat(2, 1fr);
     gap: 32px;
   }
+}
+
+/* ---------------------------------------------------------
+   Mission & Vision
+   --------------------------------------------------------- */
+.mission-vision {
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+.mission-vision__section {
+  padding: clamp(32px, 5vw, 48px);
+  background: rgba(245, 241, 228, 0.04);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  transition: background 0.3s var(--ease), border-color 0.3s var(--ease);
+}
+
+.mission-vision__section:hover {
+  background: rgba(245, 241, 228, 0.06);
+  border-color: rgba(245, 241, 228, 0.15);
 }

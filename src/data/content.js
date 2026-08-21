@@ -62,61 +62,61 @@ export const therapies = [
 export const medicareCriteria = [
   {
     label: 'Medicare Part A',
-    body: 'The patient must be enrolled in Medicare Part A. Enrollment is automatic at age 65 if Medicare taxes were paid while working.',
+    body: 'The patient must be entitled to Medicare Part A and receive care from a Medicare-certified hospice provider.',
   },
   {
-    label: 'A terminal illness',
-    body: 'Cancer, heart disease, chronic obstructive pulmonary disease (COPD), liver, kidney or neurological disease, dementia, HIV/AIDS, and others.',
+    label: 'A Terminal Illness',
+    body: 'A hospice physician and the patient\'s attending physician, if the patient has one, must certify that the patient is terminally ill. Hospice care may be appropriate for individuals with advanced illnesses such as cancer, heart disease, pulmonary disease, neurological disease, dementia, kidney or liver disease, and other life-limiting conditions.',
   },
   {
-    label: 'A prognosis of about six months',
-    body: 'Life expectancy is approximately six months or less if the illness follows its normal course.',
+    label: 'A Prognosis of Six Months or Less',
+    body: 'The patient must have a medical prognosis of six months or less if the terminal illness follows its normal course. Patients may continue receiving hospice care beyond six months as long as they continue to meet hospice eligibility requirements and are appropriately recertified.',
   },
   {
-    label: 'A choice to focus on comfort',
-    body: 'The patient chooses to forgo curative treatment in favor of symptom management, comfort, and quality of life.',
+    label: 'A Choice to Focus on Comfort',
+    body: 'The patient elects the Medicare Hospice Benefit and chooses comfort-focused care rather than Medicare-covered treatment intended to cure the terminal illness and related conditions. Hospice care focuses on pain and symptom management, comfort, dignity, and quality of life.',
   },
 ]
 
 export const faqs = [
   {
     q: 'What is hospice care?',
-    a: 'Hospice care is specialized medical care focused on comfort and quality of life for people facing terminal illness. Our team provides pain management, symptom control, and emotional and spiritual support for both patients and their families.',
+    a: 'Hospice is specialized, compassionate care for individuals facing a life-limiting illness. The focus is on comfort, symptom management, dignity, and quality of life rather than treatment intended to cure the terminal illness. Our interdisciplinary hospice team supports the physical, emotional, psychosocial, and spiritual needs of patients while also providing education and support to their families and caregivers.',
   },
   {
-    q: 'When is the right time to choose hospice?',
-    a: 'Hospice is appropriate when curative treatment is no longer effective or desired, and the focus shifts to comfort and quality of life. If a physician certifies a life expectancy of six months or less, hospice care can begin immediately.',
+    q: 'When is the right time to consider hospice?',
+    a: 'Hospice may be appropriate when a person has a serious, life-limiting illness and the focus of care has shifted toward comfort and quality of life. For the Medicare Hospice Benefit, a physician must certify that the patient is terminally ill with a life expectancy of six months or less if the illness follows its normal course. Our team can help determine whether hospice may be appropriate and explain the evaluation and admission process.',
   },
   {
     q: 'Where does hospice care take place?',
-    a: 'Most hospice care happens at home, where patients feel most comfortable. We also provide care in assisted living facilities, nursing homes, and hospitals. Our team comes to you, bringing all necessary medical equipment and supplies.',
+    a: 'Hospice care is most often provided wherever the patient calls home. This may include a private residence, assisted living or memory care community, nursing facility, or other appropriate care setting. Depending on the patient\'s needs and plan of care, hospice may arrange medically necessary equipment, medications, and supplies related to the terminal illness and related conditions.',
   },
   {
     q: 'Will I have to stop seeing my doctor?',
-    a: 'No. We work closely with your primary physician and coordinate all care. Your doctor remains involved in your treatment plan, and our hospice physician provides additional oversight specialized in end-of-life care.',
+    a: 'No. Patients may continue to have their attending physician involved in their care. The attending physician can work with the hospice interdisciplinary team and hospice physician to coordinate care, manage symptoms, and develop a plan of care based on the patient\'s individual needs and goals.',
   },
   {
-    q: 'How much does hospice cost?',
-    a: 'Medicare covers hospice services at 100%, including medications, medical equipment, nursing care, and support services. Most private insurance and Medicaid also cover hospice care. We handle all billing and work with your insurance provider.',
+    q: 'How much does hospice care cost?',
+    a: 'For eligible Medicare beneficiaries, the Medicare Hospice Benefit generally covers hospice services related to the terminal illness and related conditions, including nursing care, medications, medical equipment, supplies, and other covered hospice services. Certain copayments or coinsurance may apply, and room and board is generally not covered under the Medicare Hospice Benefit. Medicaid and many private insurance plans also provide hospice benefits, although coverage varies. Our team can help verify your benefits and explain coverage before admission.',
   },
   {
     q: 'Can hospice patients still go to the hospital?',
-    a: 'Yes, but our goal is to keep patients comfortable at home and avoid hospitalization when possible. If emergency care is needed, we coordinate with hospitals. Patients can also choose to leave hospice care at any time.',
+    a: 'Yes, when hospital care is appropriate. However, patients and caregivers should contact the hospice team before going to the emergency room or hospital whenever possible, especially when the need may be related to the terminal illness. Hospice is available 24 hours a day, 7 days a week to help assess changes in condition, manage symptoms, and determine the appropriate level of care. Patients also have the right to revoke their hospice election if they decide they no longer wish to receive hospice care.',
   },
   {
     q: 'What if the patient lives longer than six months?',
-    a: 'Hospice care can continue as long as the physician certifies that the illness remains terminal. Many patients receive hospice care for longer than six months, and we continue providing support for as long as needed.',
+    a: 'Hospice is not limited to six months of care. A patient may continue receiving hospice services beyond six months as long as the patient continues to meet hospice eligibility requirements and is appropriately recertified.',
   },
   {
     q: 'How often will someone from hospice visit?',
-    a: 'Visit frequency depends on individual needs. Typically, a nurse visits 1-3 times per week, and aides provide personal care several times weekly. Our team is available 24/7 by phone, and we can arrange urgent visits anytime.',
+    a: 'Hospice care is individualized. The frequency of nursing, hospice aide, social work, spiritual care, and other visits is determined by the patient\'s needs and individualized plan of care. Visit frequency may increase or decrease as the patient\'s condition and needs change. Hospice support is available 24 hours a day, 7 days a week for hospice-related concerns and changes in condition.',
   },
   {
     q: 'Does hospice mean giving up hope?',
-    a: 'Not at all. Hospice shifts hope from cure to comfort, quality time with loved ones, and living fully in the time remaining. Many families find hospice provides hope for peaceful, meaningful final days surrounded by support.',
+    a: 'No. Hospice changes the focus of care toward comfort, dignity, quality of life, and spending meaningful time with loved ones. Our goal is to help patients live as comfortably and fully as possible while providing patients and families with compassionate support throughout their hospice journey.',
   },
   {
     q: 'What support does hospice provide to families?',
-    a: 'We provide counseling, respite care, spiritual support, and practical guidance for caregivers. After a patient passes, we offer bereavement support for up to 13 months to help families through the grieving process.',
+    a: 'Hospice supports both the patient and family. Services may include caregiver education, emotional and psychosocial support, spiritual care, assistance with community resources, and respite care when eligibility requirements are met. Hospice also provides bereavement and grief support to families following the death of their loved one, with bereavement services available for up to one year following the patient\'s death.',
   },
 ]
