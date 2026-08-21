@@ -17,6 +17,7 @@ import overallCare from '../source/overallcare.png'
 import levelOfCare from '../source/levelofcare.png'
 import ourMission from '../source/ourmission.png'
 import ourVision from '../source/vision.png'
+import mainOffice from '../source/mainoffice.png'
 import Reveal from './components/Reveal.jsx'
 import Faq from './components/Faq.jsx'
 import Reviews from './components/Reviews.jsx'
@@ -637,6 +638,12 @@ export default function App() {
                 <h3 className="contact-card__title">Visit</h3>
                 <p className="contact-card__text">{agency.street}</p>
                 <p className="contact-card__text">{agency.city}</p>
+                <a href={mainOffice} target="_blank" rel="noopener noreferrer" className="office-photo-link">
+                  <div className="office-photo">
+                    <img src={mainOffice} alt="Main office location" />
+                  </div>
+                  <span className="office-photo-hint">Click to view office photo</span>
+                </a>
               </Reveal>
 
               <Reveal className="contact-card" delay={80}>
@@ -649,7 +656,7 @@ export default function App() {
                 <p className="contact-card__text">
                   <a href={telHref(agency.phone)}>{agency.phone}</a>
                 </p>
-                <h3 className="contact-card__title" style={{ marginTop: '16px', fontSize: '0.9rem' }}>Fax</h3>
+                <h3 className="contact-card__title" style={{ marginTop: '16px' }}>Fax</h3>
                 <p className="contact-card__text">{agency.fax}</p>
               </Reveal>
 
