@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Home, Users, Heart, Award, FileText, Mail, HelpCircle, Star } from 'lucide-react'
+import { Home, Users, Heart, Award, FileText, Mail, HelpCircle, Star, Shield } from 'lucide-react'
 import Halo from './components/Halo.jsx'
 import photoEmbrace from './assets/embrace.jpg'
 import photoCompassionate from '../source/compassionate.png'
@@ -134,6 +134,10 @@ export default function App() {
             <a className="nav__link" href="#contact" onClick={(e) => scrollToSection(e, 'contact')}>
               <Mail size={18} />
               <span>Contact Us</span>
+            </a>
+            <a className="nav__link" href="#legal-privacy" onClick={(e) => scrollToSection(e, 'legal-privacy')}>
+              <Shield size={18} />
+              <span>Legal & Privacy</span>
             </a>
           </nav>
           <button
@@ -548,45 +552,77 @@ export default function App() {
             </Reveal>
           </div>
         </section>
+
+        {/* ---------- Contact Us ---------- */}
+        <section className="section section--quiet" id="contact" aria-labelledby="contact-h">
+          <div className="shell">
+            <Reveal className="head head--center">
+              <Eyebrow>Contact Us</Eyebrow>
+              <h2 className="h2" id="contact-h">
+                Get in Touch
+              </h2>
+              <p className="head__note" style={{ marginTop: '20px' }}>
+                Contact us to find out if Haloes Touch is the right choice for you.
+              </p>
+            </Reveal>
+
+            <div className="contact-grid">
+              <Reveal className="contact-card" delay={0}>
+                <div className="contact-card__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                    <polyline points="9 22 9 12 15 12 15 22" />
+                  </svg>
+                </div>
+                <h3 className="contact-card__title">Visit</h3>
+                <p className="contact-card__text">{agency.street}</p>
+                <p className="contact-card__text">{agency.city}</p>
+              </Reveal>
+
+              <Reveal className="contact-card" delay={80}>
+                <div className="contact-card__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                  </svg>
+                </div>
+                <h3 className="contact-card__title">Call</h3>
+                <p className="contact-card__text">
+                  <a href={telHref(agency.phone)}>{agency.phone}</a>
+                </p>
+                <h3 className="contact-card__title" style={{ marginTop: '16px', fontSize: '0.9rem' }}>Fax</h3>
+                <p className="contact-card__text">{agency.fax}</p>
+              </Reveal>
+
+              <Reveal className="contact-card" delay={160}>
+                <div className="contact-card__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
+                </div>
+                <h3 className="contact-card__title">Email</h3>
+                <p className="contact-card__text">
+                  <a href={`mailto:${agency.email}`}>{agency.email}</a>
+                </p>
+              </Reveal>
+            </div>
+          </div>
+        </section>
       </main>
 
       {/* ---------- Footer ---------- */}
-      <footer className="footer" id="contact">
-        <div className="shell footer__inner">
-          <div className="footer__brand">
-            <Eyebrow>Contact Us</Eyebrow>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
-              <img src="/haloes-mark.png" alt="Haloes Touch" className="footer__mark" style={{ margin: 0 }} />
-              <p className="footer__name" style={{ margin: 0 }}>{agency.name}</p>
-            </div>
-            <p className="footer__tagline">
-              Contact us to find out if Haloes Touch is the right choice for you.
-            </p>
+      <footer className="footer">
+        <div className="shell footer__brand-simple">
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+            <img src="/haloes-mark.png" alt="Haloes Touch" className="footer__mark" />
+            <p className="footer__name">{agency.name}</p>
           </div>
-
-          <div className="footer__cols">
-            <div className="footer__col">
-              <h2 className="footer__h">Visit</h2>
-              <p style={{ whiteSpace: 'nowrap' }}>{agency.street}</p>
-              <p>{agency.city}</p>
-            </div>
-            <div className="footer__col">
-              <h2 className="footer__h">Call</h2>
-              <p style={{ whiteSpace: 'nowrap' }}>
-                <a href={telHref(agency.phone)}>{agency.phone}</a>
-              </p>
-              <h2 className="footer__h" style={{ marginTop: '8px' }}>Fax</h2>
-              <p style={{ whiteSpace: 'nowrap' }}>{agency.fax}</p>
-            </div>
-            <div className="footer__col">
-              <h2 className="footer__h">Email</h2>
-              <p>
-                <a href={`mailto:${agency.email}`}>{agency.email}</a>
-              </p>
-            </div>
-          </div>
+          <p className="footer__tagline">
+            Compassionate hospice care serving Las Vegas, Henderson, and surrounding Southern Nevada communities.
+          </p>
         </div>
-        <div className="shell footer__legal">
+
+        <div className="shell footer__legal" id="legal-privacy">
           <div className="footer__legal-section">
             <h3 className="footer__legal-h">Legal & Privacy</h3>
             <div className="footer__legal-links">
