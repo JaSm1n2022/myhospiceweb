@@ -2082,6 +2082,9 @@ ul {
   .svc-band__text--end .dot-rule {
     margin-left: auto;
   }
+  .svc-band__text--end .eyebrow {
+    text-align: center;
+  }
   .svc-band__text--end #advantage-h {
     text-align: center;
   }
