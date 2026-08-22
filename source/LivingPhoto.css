@@ -1,0 +1,156 @@
+/* LivingPhoto — ambient motion for a still photograph.
+   Timings are intentionally long. Anything under ~20s starts to read as
+   a slideshow effect rather than a room breathing. */
+
+.livingphoto {
+  margin: 0;
+  position: relative;
+}
+
+.livingphoto__frame {
+  position: relative;
+  aspect-ratio: var(--lp-ratio, 3 / 2);
+  overflow: hidden;
+  border-radius: 4px;
+  background: #e8e4dc;
+  isolation: isolate;
+}
+
+.livingphoto__base,
+.livingphoto__glow {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform-origin: 62% 55%; /* between the two faces, so neither drifts out */
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* --- Base layer: the slow push-in and drift --- */
+
+.livingphoto__base {
+  opacity: 0;
+  transform: scale(1.06);
+  transition: opacity 1200ms ease-out;
+}
+
+.livingphoto.is-loaded .livingphoto__base {
+  opacity: 1;
+}
+
+.livingphoto--soft.is-loaded .livingphoto__base {
+  animation: lp-drift 34s ease-in-out infinite alternate;
+}
+
+@keyframes lp-drift {
+  from {
+    transform: scale(1.045) translate3d(0.5%, 0.4%, 0);
+  }
+  to {
+    transform: scale(1.09) translate3d(-0.8%, -0.6%, 0);
+  }
+}
+
+/* --- Glow layer: warm light breathing in from the window ---
+   Same image, brightened, revealed through a soft directional mask.
+   Because it's the identical bitmap there's no ghosting or edge seam. */
+
+.livingphoto__glow {
+  opacity: 0;
+  filter: brightness(1.14) saturate(1.04);
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+.livingphoto--light-left .livingphoto__glow {
+  -webkit-mask-image: radial-gradient(
+    ellipse 78% 92% at 6% 34%,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.35) 42%,
+    transparent 72%
+  );
+  mask-image: radial-gradient(
+    ellipse 78% 92% at 6% 34%,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.35) 42%,
+    transparent 72%
+  );
+}
+
+.livingphoto--light-right .livingphoto__glow {
+  -webkit-mask-image: radial-gradient(
+    ellipse 78% 92% at 94% 34%,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.35) 42%,
+    transparent 72%
+  );
+  mask-image: radial-gradient(
+    ellipse 78% 92% at 94% 34%,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.35) 42%,
+    transparent 72%
+  );
+}
+
+.livingphoto--soft.is-loaded .livingphoto__glow {
+  animation:
+    lp-drift 34s ease-in-out infinite alternate,
+    lp-breathe 19s ease-in-out infinite;
+}
+
+@keyframes lp-breathe {
+  0%,
+  100% {
+    opacity: 0.16;
+  }
+  50% {
+    opacity: 0.62;
+  }
+}
+
+/* --- Vignette: holds the eye in the center of the frame --- */
+
+.livingphoto__vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse 84% 78% at 50% 46%,
+    transparent 52%,
+    rgba(28, 32, 44, 0.12) 100%
+  );
+}
+
+/* --- "still" variant: fade in, no ongoing motion --- */
+
+.livingphoto--still.is-loaded .livingphoto__base {
+  transform: scale(1.02);
+  transition:
+    opacity 1200ms ease-out,
+    transform 2400ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.livingphoto--still .livingphoto__glow {
+  opacity: 0.3;
+}
+
+/* --- Accessibility: honor the system setting --- */
+
+@media (prefers-reduced-motion: reduce) {
+  .livingphoto__base,
+  .livingphoto__glow {
+    animation: none !important;
+    transition: opacity 400ms ease-out !important;
+  }
+
+  .livingphoto.is-loaded .livingphoto__base {
+    transform: scale(1.02);
+  }
+
+  .livingphoto__glow {
+    opacity: 0.3;
+  }
+}

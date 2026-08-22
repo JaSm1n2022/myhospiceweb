@@ -22,6 +22,7 @@ import Reveal from './components/Reveal.jsx'
 import Faq from './components/Faq.jsx'
 import Reviews from './components/Reviews.jsx'
 import ServiceIcon from './components/ServiceIcon.jsx'
+import LivingPhoto from './components/LivingPhoto.jsx'
 import {
   agency,
   services,
@@ -206,11 +207,13 @@ export default function App() {
                   <br />
                   One visit at a time.
                 </h2>
-                <Figure
-                  className="figure--philosophy"
+                <LivingPhoto
                   src={photoCompassionate}
                   alt="A Haloes Touch nurse leaning beside a seated patient, both smiling."
-                  ratio="0.79"
+                  ratio="0.79 / 1"
+                  intensity="soft"
+                  lightFrom="left"
+                  className="figure--philosophy"
                 />
               </Reveal>
               <Reveal className="split__right" delay={80}>
@@ -306,16 +309,14 @@ export default function App() {
               </Reveal>
 
               <Reveal className="svc-band__media" delay={90}>
-                <figure className="figure svc-band__figure">
-                  <img
-                    src={photoElderlyChair}
-                    alt="A Haloes Touch nurse walking a patient in a wheelchair along a tree-lined path."
-                    width="1400"
-                    height="933"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </figure>
+                <LivingPhoto
+                  src={photoElderlyChair}
+                  alt="A Haloes Touch nurse walking a patient in a wheelchair along a tree-lined path."
+                  ratio="1.5 / 1"
+                  intensity="soft"
+                  lightFrom="right"
+                  className="svc-band__figure"
+                />
               </Reveal>
             </div>
 
@@ -509,16 +510,14 @@ export default function App() {
           <div className="shell">
             <div className="svc-band svc-band--mirror">
               <Reveal className="svc-band__media">
-                <figure className="figure svc-band__figure">
-                  <img
-                    src={photoElderyCare}
-                    alt="A Haloes Touch nurse sitting with a patient at home, both laughing."
-                    width="1400"
-                    height="933"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </figure>
+                <LivingPhoto
+                  src={photoElderyCare}
+                  alt="A Haloes Touch nurse sitting with a patient at home, both laughing."
+                  ratio="1.5 / 1"
+                  intensity="soft"
+                  lightFrom="left"
+                  className="svc-band__figure"
+                />
               </Reveal>
 
               <Reveal className="svc-band__text svc-band__text--end" delay={90}>
