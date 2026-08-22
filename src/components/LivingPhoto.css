@@ -42,7 +42,7 @@
 }
 
 .livingphoto--soft.is-loaded .livingphoto__base {
-  animation: lp-drift 20s ease-in-out infinite alternate;
+  animation: lp-drift 12s ease-in-out infinite alternate;
 }
 
 @keyframes lp-drift {
@@ -97,8 +97,8 @@
 
 .livingphoto--soft.is-loaded .livingphoto__glow {
   animation:
-    lp-drift 20s ease-in-out infinite alternate,
-    lp-breathe 12s ease-in-out infinite;
+    lp-drift 12s ease-in-out infinite alternate,
+    lp-breathe 8s ease-in-out infinite;
 }
 
 @keyframes lp-breathe {

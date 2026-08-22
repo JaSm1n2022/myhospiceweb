@@ -1,4 +1,5 @@
 import Reveal from './Reveal.jsx'
+import LivingPhoto from './LivingPhoto.jsx'
 import { reviews, reviewsLink } from '../data/content.js'
 import photoSharing from '../../source/sharing.png'
 import { Heart } from 'lucide-react'
@@ -13,16 +14,14 @@ export default function Reviews() {
       <div className="shell">
         <div className="head-row head-row--reverse">
           <Reveal delay={90}>
-            <figure className="figure figure--reviews">
-              <img
-                src={photoSharing}
-                alt="A Haloes Touch staff member sharing a moment with a patient."
-                width="1400"
-                height="933"
-                loading="lazy"
-                decoding="async"
-              />
-            </figure>
+            <LivingPhoto
+              src={photoSharing}
+              alt="A Haloes Touch staff member sharing a moment with a patient."
+              ratio="1.5 / 1"
+              intensity="soft"
+              lightFrom="left"
+              className="figure--reviews"
+            />
           </Reveal>
           <Reveal className="head">
             <Heart className="head__icon" size={32} strokeWidth={1.5} />

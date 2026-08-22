@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react'
 import Reveal from './Reveal.jsx'
+import LivingPhoto from './LivingPhoto.jsx'
 import { faqs } from '../data/content.js'
 import photoConsultation from '../../source/consultation.png'
 
@@ -48,16 +49,14 @@ export default function Faq() {
             </p>
           </Reveal>
           <Reveal delay={90}>
-            <figure className="figure figure--faq">
-              <img
-                src={photoConsultation}
-                alt="A Haloes Touch consultation with a patient and family."
-                width="1400"
-                height="933"
-                loading="lazy"
-                decoding="async"
-              />
-            </figure>
+            <LivingPhoto
+              src={photoConsultation}
+              alt="A Haloes Touch consultation with a patient and family."
+              ratio="1.5 / 1"
+              intensity="soft"
+              lightFrom="right"
+              className="figure--faq"
+            />
           </Reveal>
         </div>
 
