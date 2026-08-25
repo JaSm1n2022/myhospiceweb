@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Home, Users, Heart, Award, FileText, Mail, HelpCircle, Star, Shield } from 'lucide-react'
+import { Home, Users, Heart, Award, FileText, Mail, HelpCircle, Star, Shield, MapPin } from 'lucide-react'
 import Halo from './components/Halo.jsx'
 import photoEmbrace from './assets/embrace.jpg'
 import photoCompassionate from '../source/compassionate.png'
@@ -642,6 +642,16 @@ export default function App() {
                     <img src={mainOffice} alt="Main office location" />
                   </div>
                   <span className="office-photo-hint">Click to view office photo</span>
+                </a>
+                <a
+                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(agency.street + ', ' + agency.city)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn--ghost"
+                  style={{ marginTop: '16px', display: 'inline-flex', alignItems: 'center', gap: '8px' }}
+                >
+                  <MapPin size={18} />
+                  View on Map
                 </a>
               </Reveal>
 
