@@ -1,6 +1,6 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Home, Users, Heart, Award, FileText, Mail, HelpCircle, Star, Shield, MapPin } from 'lucide-react'
+import { Home, Users, Heart, Award, FileText, Mail, HelpCircle, Star, Shield, MapPin, Sun, Moon } from 'lucide-react'
 import Halo from './components/Halo.jsx'
 import photoEmbrace from './assets/embrace.jpg'
 import photoCompassionate from '../source/compassionate.png'
@@ -64,6 +64,19 @@ function Figure({ src, alt, ratio, className = '' }) {
 
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [theme, setTheme] = useState(() => {
+    if (typeof window === 'undefined') return 'dark'
+    return localStorage.getItem('theme') || 'dark'
+  })
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme)
+    localStorage.setItem('theme', theme)
+  }, [theme])
+
+  const toggleTheme = () => {
+    setTheme((t) => (t === 'dark' ? 'light' : 'dark'))
+  }
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen)
@@ -152,6 +165,14 @@ export default function App() {
               <span>Legal & Privacy</span>
             </a>
           </nav>
+          <button
+            className="theme-toggle"
+            onClick={toggleTheme}
+            aria-label={theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'}
+            title={theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'}
+          >
+            {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+          </button>
           <button
             className="hamburger"
             onClick={toggleMobileMenu}
