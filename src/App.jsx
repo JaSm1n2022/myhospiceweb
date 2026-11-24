@@ -29,6 +29,7 @@ import {
   servicesIntro,
   advantages,
   advantageIntro,
+  advantageLede,
   therapies,
   medicareCriteria,
 } from './data/content.js'
@@ -545,8 +546,9 @@ export default function App() {
                 <p className="eyebrow">{advantageIntro}</p>
                 <span className="dot-rule dot-rule--wide" aria-hidden="true" />
                 <h2 className="h2" id="advantage-h">
-                  Our Advantage
+                  Why families choose Haloes Touch
                 </h2>
+                <p className="prose">{advantageLede}</p>
                 <div className="advantage-circle">
                   <img
                     src={advantagePhoto}
@@ -739,7 +741,7 @@ export default function App() {
         <div className="shell footer__base">
           <div className="footer__base-content">
             <p>
-              © {new Date().getFullYear()} {agency.name}. All rights reserved.
+              © {new Date().getFullYear()} {agency.name} All rights reserved.
             </p>
             <p className="footer__seal">
               <AchcBadge small />

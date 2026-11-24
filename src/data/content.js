@@ -157,35 +157,38 @@ export const servicesDetailed = [
 
 export const advantageIntro = "Why Choose Us";
 
+export const advantageLede =
+  "Compassionate, local hospice care from a team you can reach any time.";
+
 export const advantages = [
   {
-    title: "Trained and fully licensed staff",
-    body: "Our clinicians go through rigorous screening and training so they can deliver evidence-based care — and build the kind of connection with patients that feels like a second family.",
+    title: "A trained, caring team",
+    body: "Our nurses, hospice aides, social worker, and chaplain are licensed or certified as required, carefully screened, and trained in hospice and comfort care, so your loved one is cared for with skill and kindness.",
     icon: "nursing",
   },
   {
-    title: "Personalized care plans",
-    body: "We build the plan around your goals and preferences, with specific programs for conditions like COPD, heart failure, diabetes, and fall prevention.",
+    title: "A plan built around you",
+    body: "Your hospice team, working with your physician, creates a plan of care around your goals, wishes, and comfort, and updates it as your needs change.",
     icon: "physician",
   },
   {
-    title: "24/7, 365 days a year",
-    body: "Nurses, physicians, and therapists are available round the clock. On-call clinicians answer the phone promptly, which keeps patients safer and out of the hospital.",
+    title: "Support any time, day or night",
+    body: "A hospice nurse is on call 24 hours a day, 7 days a week, with physician support available. You can call us any time with hospice-related concerns.",
     icon: "aide",
   },
   {
-    title: "Full coverage",
-    body: "Medicare covers almost all hospice expenses. We are Medicare certified, and we will walk you through what qualifies.",
+    title: "Medicare hospice benefit",
+    body: "Haloes Touch is Medicare certified. For eligible patients, Medicare Part A covers hospice care related to the terminal illness, including related medications, medical equipment, and supplies. A small copay may apply for medications and for inpatient respite care. We'll explain what's covered before care begins.",
     icon: "equipment",
   },
   {
-    title: "Trusted in the community",
-    body: "We are one of the most trusted names in hospice care in Southern Nevada. That trust was earned patient by patient, family by family.",
+    title: "Local and family-centered",
+    body: "Based in Henderson and serving Las Vegas, Henderson, and surrounding Southern Nevada communities, we support the whole family, including grief and bereavement support after a loss.",
     icon: "social",
   },
   {
-    title: "Excellent quality score",
-    body: "Every part of our service exceeds the standards set by regulatory bodies, and our outcomes consistently run ahead of the national hospice benchmark.",
+    title: "Accredited and committed to quality",
+    body: "Haloes Touch is accredited by ACHC and follows Medicare hospice standards. We regularly review our care through our quality improvement program.",
     icon: "bereavement",
   },
 ];
@@ -245,6 +248,10 @@ export const faqs = [
     a: "Hospice is not limited to six months of care. A patient may continue receiving hospice services beyond six months as long as the patient continues to meet hospice eligibility requirements and is appropriately recertified.",
   },
   {
+    q: "Can I change my mind?",
+    a: "Yes. You can stop hospice care (revoke) or change hospice providers at any time, and you can return to hospice later if you're still eligible.",
+  },
+  {
     q: "How often will someone from hospice visit?",
     a: "Hospice care is individualized. The frequency of nursing, hospice aide, social work, spiritual care, and other visits is determined by the patient's needs and individualized plan of care. Visit frequency may increase or decrease as the patient's condition and needs change. Hospice support is available 24 hours a day, 7 days a week for hospice-related concerns and changes in condition.",
   },
@@ -261,7 +268,7 @@ export const faqs = [
 export const reviews = [
   {
     quote:
-      "My family was referred to Haloes Touch when my 93-year-old father needed a care setting where he could receive full assistance with his daily needs. Phil was incredibly helpful throughout the entire process. He took the time to find a wonderful placement for my father and even drove my mom there so she could visit and make sure it was the right fit. Phil also guided us through the enrollment process and helped us with the paperwork, making what could have been an overwhelming experience much easier for our family. The placement he found for my dad has exceeded our expectations. He is very well cared for, and he is always in a good mood whenever I visit or speak with him. We are very grateful for the care, guidance, and support we received. I would definitely recommend Haloes Touch to families looking for compassionate support and assistance for their loved ones.",
+      "My family was referred to Haloes Touch when my 93-year-old father needed a care setting where he could receive full assistance with his daily needs. Phil was incredibly helpful throughout the entire process, guiding us through the enrollment process and helping us with the paperwork, which made what could have been an overwhelming experience much easier for our family. He is very well cared for, and he is always in a good mood whenever I visit or speak with him. We are very grateful for the care, guidance, and support we received. I would definitely recommend Haloes Touch to families looking for compassionate support and assistance for their loved ones.",
     name: "Shep A.",
     relation: "Family member",
     source: "Google Reviews",
